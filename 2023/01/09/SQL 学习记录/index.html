@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="基础语法SELECT COLUMNS FROM  TABLE JOIN TABKE JOIN  WHERE GROUP BY HAVING 3 聚合与排序   count 计算列时不会计算NULL, 计算*时 返回所有的行数  聚合函数一般不会计算NULL值 SUM and average is only used for numerical data while the MAX and MIN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL学习记录">
+<meta property="og:url" content="https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Civil Engineer-爆破工程师">
+<meta property="og:description" content="基础语法SELECT COLUMNS FROM  TABLE JOIN TABKE JOIN  WHERE GROUP BY HAVING 3 聚合与排序   count 计算列时不会计算NULL, 计算*时 返回所有的行数  聚合函数一般不会计算NULL值 SUM and average is only used for numerical data while the MAX and MIN">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%201.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%202.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%203.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%204.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%205.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%206.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%207.png">
+<meta property="og:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%208.png">
+<meta property="article:published_time" content="2023-01-09T09:37:13.000Z">
+<meta property="article:modified_time" content="2023-06-09T08:52:01.556Z">
+<meta property="article:author" content="Yunfei Li">
+<meta property="article:tag" content="engineer">
+<meta property="article:tag" content="blasting">
+<meta property="article:tag" content="underground mining">
+<meta property="article:tag" content="data analysis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://minipawl.com/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>SQL学习记录</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/CV/">My Resume</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Articles</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/04/08/%E6%95%B0%E6%8D%AE%E5%B1%80%E9%99%90%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/01/08/How%20to%20select%20your%20path/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&text=SQL学习记录"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&is_video=false&description=SQL学习记录"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=SQL学习记录&body=Check out this article: https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&name=SQL学习记录&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&t=SQL学习记录"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">基础语法</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        SQL学习记录
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Yunfei Li</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-01-09T09:37:13.000Z" class="dt-published" itemprop="datePublished">2023-01-09</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><p><code>SELECT</code></p>
+<p><code>COLUMNS</code></p>
+<p><code>FROM</code> </p>
+<p><code>TABLE</code> JOIN TABKE JOIN </p>
+<p><code>WHERE</code></p>
+<p><code>GROUP BY</code></p>
+<p><code>HAVING</code></p>
+<p>3 聚合与排序</p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled.png" alt="Untitled"></p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%201.png" alt="Untitled"></p>
+<p><strong>count 计算列时不会计算NULL, 计算*时 返回所有的行数</strong></p>
+<hr>
+<p>聚合函数一般不会计算NULL值</p>
+<p>SUM and average is only used for numerical data while the MAX and MIN are available for any data</p>
+<hr>
+<p>Group by</p>
+<p>GROUP BY 子句的书写位置也有严格要求，一定要写在 FROM 语句之后（如果有 WHERE 子句的话需要写在 WHERE 子句之后）。</p>
+<hr>
+<p>当聚合键中包含 NULL 时，也会将NULL 作为一组特定的数据</p>
+<p>FROM to  where to group by to having to select</p>
+<p>FROM → WHERE → GROUP BY → SELECT</p>
+<hr>
+<p>使用聚合函数时， SELECT 子句中只能存在以下三种</p>
+<p>元素。</p>
+<p>●	常数</p>
+<p>●	聚合函数</p>
+<p>● GROUP BY子句中指定的列名（也就是聚合键）</p>
+<hr>
+<p>ROUP BY 子句的结果通常都包含多行，有时可能还会是成百上千行。那么，这些结果究竟是按照什么顺序排列的呢？</p>
+<p>答案是：“随机的。”</p>
+<p>我们完全不知道结果记录是按照什么规则进行排序的。可能乍一看是按照行数的降序或者聚合键的升序进行排列的，但其实这些全都是偶然的。</p>
+<p>当你再次执行同样的 SELECT 语句时，得到的结果可能会按照完全不同的顺序进行排列。</p>
+<p>通常 SELECT 语句的执行结果的显示顺序都是随机的，因此想要按照某种特定顺序进行排序的话， 需要在 SELECT 语句中进行指定。</p>
+<hr>
+<p>只有子句SELECT和子句HAVIING（以及子句ORDER BY）中能够使用聚合函数.</p>
+<hr>
+<p>WHERE 子句 &#x3D; 指定行所对应的条件</p>
+<p>HAVING 子句 &#x3D; 指定组所对应的条件</p>
+<hr>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%202.png" alt="Untitled"></p>
+<hr>
+<p>3-4 第3章　聚合与排序 对查询结果进行排序</p>
+<p>在 GROUP BY 子句中不能使用</p>
+<p>SELECT 子句中定义的别名，但是在 ORDER BY 子句中却是允许使用别</p>
+<p>名的。因此，代码清单 3-32 中的 SELECT 语句并不会出错，可正确执行。</p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%203.png" alt="Untitled"></p>
+<p>在子句中可以使用子句中未使用的列和聚合函数。</p>
+<hr>
+<hr>
+<p>4 数据的更新</p>
+<p>数据的更新处理</p>
+<p>大体可以分为插入（ INSERT）、删除（ DELETE）和更新（ UPDATE）三类。</p>
+<p>管理数据更新的重要概念——事务。</p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%204.png" alt="Untitled"></p>
+<p>对表进行全列 INSERT 时，可以省略表名后的列清单。这时 VALUES</p>
+<p>子句的值会默认按照从左到右的顺序赋给每一列。因此，代码清单 4-3 中</p>
+<p>的两个 INSERT 语句会插入同样的数据</p>
+<hr>
+<p>INSERT 语句中想给某一列赋予 NULL 值时，可以直接在 VALUES</p>
+<p>子句的值清单中写入 NULL。例如，要向 purchase_price 列（进货</p>
+<p>单价）中插入 NULL，就可以使用代码清单 4-4 中的 INSERT 语句。</p>
+<hr>
+<p>INSERT INTO A (cola,colb)</p>
+<p>select</p>
+<p>colc cold</p>
+<p>FROM</p>
+<p>C</p>
+<p><code>INSERT INTO ProductType (product_type, sum_sale_price,</code> </p>
+<p><code>sum_purchase_price)</code></p>
+<p><code>SELECT product_type, SUM(sale_price), SUM(purchase_price)</code></p>
+<p><code>FROM Product</code></p>
+<p><code>GROUP BY product_type;</code></p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%205.png" alt="Untitled"></p>
+<p>update table</p>
+<p>set a &#x3D; vb</p>
+<p>where dd</p>
+<hr>
+<p>事务是需要在同一个处理单元中执行的一系列更新处理的集合。</p>
+<p><code>START TRANSACTION;</code></p>
+<ul>
+<li><code>- 将运动T恤的销售单价降低1000日元</code></li>
+</ul>
+<p><code>UPDATE Product</code></p>
+<p><code>SET sale_price = sale_price - 1000</code></p>
+<p><code>WHERE product_name = &#39;运动T恤&#39;;</code></p>
+<ul>
+<li><code>- 将T恤衫的销售单价上浮1000日元</code></li>
+</ul>
+<p><code>UPDATE Product</code></p>
+<p><code>SET sale_price = sale_price + 1000</code></p>
+<p><code>WHERE product_name = &#39;T恤衫&#39;;</code></p>
+<p>事务 没懂</p>
+<hr>
+<hr>
+<p>5 复杂查询</p>
+<p>5.1 视图</p>
+<p>视图的限制① ——定义视图时不能使用ORDER BY子句</p>
+<p>视图的限制② ——对视图进行更新</p>
+<p>—视图和表需要同时进行更新，因此通过汇总得到的视图无法进行更新。</p>
+<p>5.2 标量子查询</p>
+<p>标量子查询就是返回单一值的子查询。</p>
+<p>用于解决where无法应用于聚合函数的缺点，但同时标量子查询不能返回多行结果</p>
+<hr>
+<p>5.3 关联子查询</p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%206.png" alt="Untitled"></p>
+<hr>
+<hr>
+<p>6 函数 谓词 CASE表达式</p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%207.png" alt="Untitled"></p>
+<p>SUBSTRING</p>
+<p>UPPER, LOWER,EXTRACT,REPLACE LENGTH</p>
+<hr>
+<p>6.2 PREDICATE</p>
+<p>IN </p>
+<p>EXIST</p>
+<p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%208.png" alt="Untitled"></p>
+<p>6.3 CASE 表达式</p>
+<p><code>CASE WHEN &lt;求值表达式&gt; THEN &lt;表达式&gt;</code></p>
+<p><code>WHEN &lt;求值表达式&gt; THEN &lt;表达式&gt;</code></p>
+<p><code>WHEN &lt;求值表达式&gt; THEN &lt;表达式&gt;</code></p>
+<p><code>.</code></p>
+<p><code>.</code></p>
+<p><code>.</code></p>
+<p><code>ELSE &lt;表达式&gt;</code></p>
+<p><code>END</code></p>
+<p>case when a&gt;b then c else end as inter</p>
+<p><strong>7 集合运算</strong></p>
+<p>7.1 表的加减法</p>
+<p>7.2 表关联</p>
+<p>使用联结时子句中的列需要按照“表的别名.列名”的格式进行书写。</p>
+<p>INNER JOIN</p>
+<p>OUTER JOIN</p>
+<p>CROSS JOIN</p>
+<p><strong>8 SQL高级处理</strong></p>
+<p>RANK</p>
+<p>ROW_NUMBERS</p>
+<p>DENSE_RANK</p>
+<p><code>OVER</code> 子句用于在聚合函数中使用窗口函数。窗口函数可以在不妨碍查询结果的情况下，对行进行排序并进行聚合计算。<code>OVER</code> 子句的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;aggregate_function&gt; OVER (</span><br><span class="line">  [PARTITION BY &lt;column_name&gt;]</span><br><span class="line">  [ORDER BY &lt;column_name&gt; [ASC|DESC]]</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>&lt;aggregate_function&gt;</code>：聚合函数的名称。</li>
+<li><code>&lt;column_name&gt;</code>：要分组、排序或聚合的列名。</li>
+<li><code>PARTITION BY</code>：指定一个分组列的名称，用于将数据分组。</li>
+<li><code>ORDER BY</code>：指定一个排序列的名称，用于对分组数据进行排序。可以选择按升序（ASC）或降序（DESC）进行排序。</li>
+</ul>
+<p>例如，以下 SQL 查询语句使用 <code>OVER</code> 子句计算每个客户的销售总额和平均销售额，以及每个客户的销售总额在所有客户中所占的百分比：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">  customer_id,</span><br><span class="line">  SUM(sales_amount) OVER (PARTITION BY customer_id) total_sales_amount,</span><br><span class="line">  AVG(sales_amount) OVER (PARTITION BY customer_id) avg_sales_amount,</span><br><span class="line">  100.0 * SUM(sales_amount) OVER (PARTITION BY customer_id) / SUM(sales_amount) OVER () sales_amount_percentage</span><br><span class="line">FROM</span><br><span class="line">  sales;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>该查询语句使用 <code>PARTITION BY</code> 子句将数据按客户 ID 分组，然后使用 <code>SUM</code> 和 <code>AVG</code> 聚合函数计算每个客户的销售总额和平均销售额。最后，使用 <code>OVER</code> 子句计算每个客户的销售总额在所有客户中所占的百分比。</p>
+<hr>
+<p>系统性的学习某一门电脑语言对构建逻辑思维还是非常有用的</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/CV/">My Resume</a></li>
+        
+          <li><a href="/archives/">Articles</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">基础语法</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&text=SQL学习记录"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&is_video=false&description=SQL学习记录"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=SQL学习记录&body=Check out this article: https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&title=SQL学习记录"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&name=SQL学习记录&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&t=SQL学习记录"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    Yunfei Li
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/CV/">My Resume</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Articles</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
