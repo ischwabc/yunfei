@@ -128,28 +128,30 @@
   </entry>
   
   <entry>
-    <title>How do I think “Reading”</title>
-    <link href="https://minipawl.com/2023/04/23/How%20do%20I%20think%20%E2%80%9CReading%E2%80%9D/"/>
-    <id>https://minipawl.com/2023/04/23/How%20do%20I%20think%20%E2%80%9CReading%E2%80%9D/</id>
-    <published>2023-04-23T10:54:39.000Z</published>
-    <updated>2023-06-09T12:04:06.516Z</updated>
+    <title>数据分析师国内求职机会分析</title>
+    <link href="https://minipawl.com/2023/04/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E5%9B%BD%E5%86%85%E6%B1%82%E8%81%8C%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90%206d8a41f93ff84fb59d0c55398482cf84/"/>
+    <id>https://minipawl.com/2023/04/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E5%9B%BD%E5%86%85%E6%B1%82%E8%81%8C%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90%206d8a41f93ff84fb59d0c55398482cf84/</id>
+    <published>2023-04-10T20:41:25.000Z</published>
+    <updated>2023-06-10T20:44:18.251Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="How-do-I-think-“Reading”"><a href="#How-do-I-think-“Reading”" class="headerlink" title="How do I think “Reading”"></a>How do I think “Reading”</h1><p><strong>Concept</strong></p><p>Before discussing a concept, let’s first define its connotation, extension, and the boundaries of the discussion. My understanding of “reading” is: as a behavior, obtaining information through text-based media. This information may not have an effect on you.</p><ol><li><strong>Text-based media</strong></li><li><strong>Obtaining information</strong></li><li><strong>Such information may have an impact</strong></li></ol><p>Example 1: A physics book will tell you the mechanical reasons for the movement of objects. If you start reading, there may be the following outcomes:</p><p>—<strong>You don’t understand at all</strong></p><p>In this case, you are just “looking” at the book, which is not reading. Even if you look at it for ten years, reading hasn’t started yet.</p><p>—<strong>You understand, acquire knowledge of mechanics, and comprehend the principles of object movement</strong></p><p>In this case, you are “reading.” Perhaps you can understand why high-speed cars have a long braking distance, and why bicycles don’t fall over. Whether or not you can invent a product like a “bicycle” is an unknown!</p><p>“<strong>To read or not to read”</strong></p><p>First, we need to rule out the “don’t understand” problem because that’s not considered reading. Personally, I categorize reading into three types:</p><ol><li><p>Reading as input, outputting some unpredictable results through the brain’s exploration.</p><p> This is generally referred to as inspiring thinking. Your input may be controlled by others, such as educational reading clubs or recommendations from others. This is more like the popular AI language models.</p><p> Pros: It may create a wonderful chemical reaction; perhaps you’ll have an epiphany after reading.</p><p> Cons: If the input is single or even controlled, the output will also be single, perhaps a form of “brainwashing.”</p><p> Advice: If you are often passively required to read, you can explore different types or even completely opposite ones. For example, pairing mainstream books with “banned books.”</p></li><li><p>Reading as a tool, flipping through books for a specific goal or problem, thus achieving a problem-solving result.</p><p> This is a more practical method I use. You could say “every book is beneficial,” but it’s very utilitarian.</p><p> Pros: Books offer a more systematic and accurate explanation of the problem. And it can solve the problem relatively quickly. Especially for broad issues, this method can help you enter the relevant field fastest.</p><p> Cons: Poor timeliness, especially for cutting-edge problems. For some specific issues, forums may be more efficient.</p><p> Advice: Stay sensitive and be sure to understand the background of the book first.</p></li><li><p>Reading as a habit, similar to watching TV.</p><p> I admire those who make reading a habit, especially for non-fiction books. The input of information is not a pleasant process. This type of “reading” might be driven by the dopamine rush from entertaining novel reading or the habit of reading by successful people…</p><p> Advice: No advice, as I have little exposure to this.</p></li></ol><p>In summary, if you:</p><ol><li>Don’t expect yourself to have “output,” let alone transform yourself</li><li>Don’t have a problem that needs solving and don’t like solving problems yourself</li></ol><p>Then there is no need to read.</p><p><strong>Suggestions</strong></p><p>We all live in an environment where high-quality information is scarce. As a method of obtaining information, <strong>reading can be considered the most effective means.</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>初步解决了爬虫问题，分析了下“数据分析”岗位的行业情况。<br>-数据来源：bszp，<br>-数据量：3万条，一二线城市，涵盖21643家企业</p><p>-软件：Power BI</p><p><img src="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E5%9B%BD%E5%86%85%E6%B1%82%E8%81%8C%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90%206d8a41f93ff84fb59d0c55398482cf84/Untitled.jpeg" alt="Untitled"></p><p><strong>普通指标</strong>：需求岗位（样本） 平均起始薪资。<br>分析-电子商务需求大于互联网，但薪资比较普通</p><p><img src="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E5%9B%BD%E5%86%85%E6%B1%82%E8%81%8C%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90%206d8a41f93ff84fb59d0c55398482cf84/Untitled%201.jpeg" alt="Untitled"></p><p><strong>综合指标：优先度<br>分析</strong>-本科学历足够<br>分析-经验趋向于5年以上<br>分析-首要技能为SQL, PYTHON, hive( 这个敲重点）<br>分析-广州，厦门可以作为求职意向城市</p><p><img src="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E5%9B%BD%E5%86%85%E6%B1%82%E8%81%8C%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90%206d8a41f93ff84fb59d0c55398482cf84/Untitled%202.jpeg" alt="Untitled"></p><p>具体公司情况，或者有感兴趣的岗位可以交流。</p><p><img src="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E5%9B%BD%E5%86%85%E6%B1%82%E8%81%8C%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90%206d8a41f93ff84fb59d0c55398482cf84/Untitled.png" alt="Untitled"></p><p>招聘行情</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;How-do-I-think-“Reading”&quot;&gt;&lt;a href=&quot;#How-do-I-think-“Reading”&quot; class=&quot;headerlink&quot; title=&quot;How do I think “Reading”&quot;&gt;&lt;/a&gt;How do I think</summary>
+    <summary type="html">&lt;p&gt;初步解决了爬虫问题，分析了下“数据分析”岗位的行业情况。&lt;br&gt;-数据来源：bszp，&lt;br&gt;-数据量：3万条，一二线城市，涵盖21643家企业&lt;/p&gt;
+&lt;p&gt;-软件：Power BI&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/%E6%95%B0%E6%8D%AE%E5%88%8</summary>
       
     
     
     
-    <category term="personal" scheme="https://minipawl.com/categories/personal/"/>
+    <category term="data" scheme="https://minipawl.com/categories/data/"/>
     
     
-    <category term="Reading" scheme="https://minipawl.com/tags/Reading/"/>
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
     
-    <category term="Life" scheme="https://minipawl.com/tags/Life/"/>
+    <category term="tools" scheme="https://minipawl.com/tags/tools/"/>
     
   </entry>
   
@@ -295,6 +297,32 @@
     
     
     <category term="Data Analyst" scheme="https://minipawl.com/tags/Data-Analyst/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How do I think “Reading”</title>
+    <link href="https://minipawl.com/2022/04/23/How%20do%20I%20think%20%E2%80%9CReading%E2%80%9D/"/>
+    <id>https://minipawl.com/2022/04/23/How%20do%20I%20think%20%E2%80%9CReading%E2%80%9D/</id>
+    <published>2022-04-23T10:54:39.000Z</published>
+    <updated>2023-06-10T20:43:47.303Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="How-do-I-think-“Reading”"><a href="#How-do-I-think-“Reading”" class="headerlink" title="How do I think “Reading”"></a>How do I think “Reading”</h1><p><strong>Concept</strong></p><p>Before discussing a concept, let’s first define its connotation, extension, and the boundaries of the discussion. My understanding of “reading” is: as a behavior, obtaining information through text-based media. This information may not have an effect on you.</p><ol><li><strong>Text-based media</strong></li><li><strong>Obtaining information</strong></li><li><strong>Such information may have an impact</strong></li></ol><p>Example 1: A physics book will tell you the mechanical reasons for the movement of objects. If you start reading, there may be the following outcomes:</p><p>—<strong>You don’t understand at all</strong></p><p>In this case, you are just “looking” at the book, which is not reading. Even if you look at it for ten years, reading hasn’t started yet.</p><p>—<strong>You understand, acquire knowledge of mechanics, and comprehend the principles of object movement</strong></p><p>In this case, you are “reading.” Perhaps you can understand why high-speed cars have a long braking distance, and why bicycles don’t fall over. Whether or not you can invent a product like a “bicycle” is an unknown!</p><p>“<strong>To read or not to read”</strong></p><p>First, we need to rule out the “don’t understand” problem because that’s not considered reading. Personally, I categorize reading into three types:</p><ol><li><p>Reading as input, outputting some unpredictable results through the brain’s exploration.</p><p> This is generally referred to as inspiring thinking. Your input may be controlled by others, such as educational reading clubs or recommendations from others. This is more like the popular AI language models.</p><p> Pros: It may create a wonderful chemical reaction; perhaps you’ll have an epiphany after reading.</p><p> Cons: If the input is single or even controlled, the output will also be single, perhaps a form of “brainwashing.”</p><p> Advice: If you are often passively required to read, you can explore different types or even completely opposite ones. For example, pairing mainstream books with “banned books.”</p></li><li><p>Reading as a tool, flipping through books for a specific goal or problem, thus achieving a problem-solving result.</p><p> This is a more practical method I use. You could say “every book is beneficial,” but it’s very utilitarian.</p><p> Pros: Books offer a more systematic and accurate explanation of the problem. And it can solve the problem relatively quickly. Especially for broad issues, this method can help you enter the relevant field fastest.</p><p> Cons: Poor timeliness, especially for cutting-edge problems. For some specific issues, forums may be more efficient.</p><p> Advice: Stay sensitive and be sure to understand the background of the book first.</p></li><li><p>Reading as a habit, similar to watching TV.</p><p> I admire those who make reading a habit, especially for non-fiction books. The input of information is not a pleasant process. This type of “reading” might be driven by the dopamine rush from entertaining novel reading or the habit of reading by successful people…</p><p> Advice: No advice, as I have little exposure to this.</p></li></ol><p>In summary, if you:</p><ol><li>Don’t expect yourself to have “output,” let alone transform yourself</li><li>Don’t have a problem that needs solving and don’t like solving problems yourself</li></ol><p>Then there is no need to read.</p><p><strong>Suggestions</strong></p><p>We all live in an environment where high-quality information is scarce. As a method of obtaining information, <strong>reading can be considered the most effective means.</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;How-do-I-think-“Reading”&quot;&gt;&lt;a href=&quot;#How-do-I-think-“Reading”&quot; class=&quot;headerlink&quot; title=&quot;How do I think “Reading”&quot;&gt;&lt;/a&gt;How do I think</summary>
+      
+    
+    
+    
+    <category term="personal" scheme="https://minipawl.com/categories/personal/"/>
+    
+    
+    <category term="Reading" scheme="https://minipawl.com/tags/Reading/"/>
+    
+    <category term="Life" scheme="https://minipawl.com/tags/Life/"/>
     
   </entry>
   
