@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>I am a Civil Engineer</title>
+  
+  <subtitle>爱数据分析的爆破工程师</subtitle>
+  <link href="https://minipawl.com/atom.xml" rel="self"/>
+  
+  <link href="https://minipawl.com/"/>
+  <updated>2023-06-10T19:45:21.331Z</updated>
+  <id>https://minipawl.com/</id>
+  
+  <author>
+    <name>Yunfei Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>职业生涯 career</title>
+    <link href="https://minipawl.com/2023/06/10/%E5%B2%97%E4%BD%8D%E5%88%86%E4%BA%AB/"/>
+    <id>https://minipawl.com/2023/06/10/%E5%B2%97%E4%BD%8D%E5%88%86%E4%BA%AB/</id>
+    <published>2023-06-10T19:34:22.000Z</published>
+    <updated>2023-06-10T19:45:21.331Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下是ASCE官网公布的一些工程师岗位，主要分布在海外欧美国家。说实话进入门槛非常高，分享给大家至少让大家看到这些机会。目前抓到的数据是1500 个岗位。30%在英国，剩下的在美国及欧洲。</p><iframe width="650" height="400" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=7AB9174EA16EA55B%2161549&authkey=%21AGqBbk3Narw2tQ8&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True&ed1JS=false"></iframe><p>后续一些职业机会我也会继续分享在这里，数据来源都是官方的，为大家提供了超链接（蓝色的中文名称岗位），可以直接进入到官网投递。</p><p>—另，求职需谨慎，谨防受骗</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;以下是ASCE官网公布的一些工程师岗位，主要分布在海外欧美国家。说实话进入门槛非常高，分享给大家至少让大家看到这些机会。目前抓到的数据是1500 个岗位。30%在英国，剩下的在美国及欧洲。&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;400&quot; fram</summary>
+      
+    
+    
+    
+    <category term="engineer" scheme="https://minipawl.com/categories/engineer/"/>
+    
+    
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="share" scheme="https://minipawl.com/tags/share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>露天爆破计算 - blasting design for open pit</title>
+    <link href="https://minipawl.com/2023/06/09/cactus%E4%BB%A3%E7%A0%81/"/>
+    <id>https://minipawl.com/2023/06/09/cactus%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-06-08T22:00:00.000Z</published>
+    <updated>2023-06-09T21:39:02.020Z</updated>
+    
+    <content type="html"><![CDATA[<p>此工具为2016年根据培训课程整理所得，所有计算均基于经验公式。对于不常见情形的参数请谨慎参考！</p><style>    form {        margin-bottom: 20px;    }    form label {        display: block;        margin-bottom: 5px;    }    form input[type="number"] {        width: 100%;        padding: 8px;        margin-bottom: 20px;        font-size: 16px;        border: 1px solid #ddd;    }    form input[type="submit"] {        display: block;        width: 100%;        padding: 10px;        background-color: #333;        color: #fff;        font-size: 18px;        cursor: pointer;        border: none;    }    form input[type="submit"]:hover {        background-color: #555;    }    #results {        padding: 20px;    }    #results p {        margin-bottom: 10px;    }    .form-row {        display: flex;        justify-content: space-between;        margin-bottom: 20px;    }    .form-row label {        flex: 1;        margin-right: 10px;    }    .form-row input[type="number"] {        flex: 3;    }    .container {        display: flex;        justify-content: space-between;    }    form, #results {        flex: 1;        margin-right: 20px;    }    #results {        margin-right: 0;    }/* 为了让页面在小屏幕设备上看起来更好，我们可以添加一些媒体查询 */@media (max-width: 600px) {  .container {    flex-direction: column;  }  form,  #results {    flex: none;    margin-right: 0;    width: 100%;  }  form {    margin-bottom: 20px;  }}</style><h1 id="参数计算"><a href="#参数计算" class="headerlink" title="参数计算"></a>参数计算</h1><div class="container">    <form id="calculation-form">      <div class="form-row">      <label for="theta">炮孔密集系数θ:</label>      <input type="number" id="theta" name="theta" step="0.01" value="1.20">    </div>    <div class="form-row">      <label for="density">装药密度ρ(g/cm3):</label>      <input type="number" id="density" name="density" step="0.01" value="1.00">    </div>    <div class="form-row">      <label for="diameter">孔径D(mm):</label>      <input type="number" id="diameter" name="diameter" step="0.01" value="100">    </div>    <div class="form-row">      <label for="consumption">单耗k(kg/m3):</label>      <input type="number" id="consumption" name="consumption" step="0.01" value="0.5">    </div>    <div class="form-row">      <label for="height">台阶高度H(m):</label>      <input type="number" id="height" name="height" step="0.01" value="10">    </div>    <div class="form-row">      <label for="explosive-diameter">装药直径(mm):</label>      <input type="number" id="explosive-diameter" name="explosive-diameter" step="0.01" value="90">    </div>   <input type="submit" value="计算">        </form>    <div id="results">        <h2>点击计算出现计算结果</h2>        <!-- 这里显示计算结果 -->    </div></div><script>        function calculate() {            const theta = parseFloat(document.getElementById('theta').value);            const density = parseFloat(document.getElementById('density').value);            const diameter = parseFloat(document.getElementById('diameter').value);            const consumption = parseFloat(document.getElementById('consumption').value);            const height = parseFloat(document.getElementById('height').value);            const explosiveDiameter = parseFloat(document.getElementById('explosive-diameter').value);            const h = diameter / 100;            const e = (height - 0.025 * diameter) * explosiveDiameter * explosiveDiameter / (height + 0.055 * diameter) / diameter / diameter;            const W = (diameter / 100) * Math.sqrt(7.85 * density * e / consumption / theta);            const q1 = 0.8 * explosiveDiameter * explosiveDiameter * density / 1000;            const l2 = Math.max(0.03 * diameter, 0.75 * W);            const l1 = h + height - l2;            const Qe = q1 * l1;            const V = Qe / consumption;            const S = V / height;            const a = Math.sqrt(S * 2 / 1.732);            const b = S / a;            return {                h, W, q1, l1, l2, Qe, V, S, a, b, e            };        }        document.getElementById('calculation-form').addEventListener('submit', function (event) {            event.preventDefault();            const results = calculate();            const resultsDiv = document.getElementById('results');            resultsDiv.innerHTML = '';            const labels = {                h: '超深h(m)',                W: '底盘抵抗线W(m)',                q1: '线装药密度q1',                l1: '装药长度l1(m)',                l2: '填塞长度l2(m)',                Qe: '单孔药量Qe(kg)',                V: '单孔爆破体积V',                S: '炮孔复合面积S',                a: '孔距a(m)',                b: '排距b(m)',                e: '装药系数e'            };            for (const key in results) {                const result = document.createElement('p');                result.textContent = `${labels[key]}: ${results[key].toFixed(1)}`;                resultsDiv.appendChild(result);            }        });    </script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;此工具为2016年根据培训课程整理所得，所有计算均基于经验公式。对于不常见情形的参数请谨慎参考！&lt;/p&gt;
+&lt;style&gt;
+    form {
+        margin-bottom: 20px;
+    }
+
+    form label {
+        disp</summary>
+      
+    
+    
+    
+    <category term="engineer" scheme="https://minipawl.com/categories/engineer/"/>
+    
+    
+    <category term="tools" scheme="https://minipawl.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>井巷掘进炮孔数目计算</title>
+    <link href="https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"/>
+    <id>https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/</id>
+    <published>2023-06-08T22:00:00.000Z</published>
+    <updated>2023-06-10T19:38:16.591Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="井巷掘进炮孔数目计算"><a href="#井巷掘进炮孔数目计算" class="headerlink" title="井巷掘进炮孔数目计算"></a>井巷掘进炮孔数目计算</h1><table><thead><tr><th>岩石坚固性系数 &#x2F;f</th><th>掘进断面＜12 m2</th><th>掘进断面＞12 m2</th></tr></thead><tbody><tr><td>1.6～3</td><td>2～3</td><td>2.5～3.5</td></tr><tr><td>4～6</td><td>1.5～2</td><td>2.2～2.5</td></tr><tr><td>7～20</td><td>1.2～1.8</td><td>1.5～2.2</td></tr></tbody></table><p>请在下面输入岩石坚固系数和巷道截面，然后点击 “计算” 按钮以计算炮孔数目。</p><style>.input-container {display: flex;flex-direction: column;align-items: center;gap: 10px;}.input-label {display: flex;gap: 10px;align-items: center;font-size: 16px;}input[type="number"] {border: 1px solid #ccc;border-radius: 4px;font-size: 16px;padding: 5px 10px;width: 100%;max-width: 200px;}button {background-color: #2aa198;border: none;border-radius: 4px;color: white;cursor: pointer;font-size: 16px;padding: 10px 20px;text-transform: uppercase;}button:hover {background-color: #268bd2;}</style><div class="input-container"><div class="input-label"><label for="rockSolidity">岩石坚固系数:</label><input type="number" id="rockSolidity" step="0.01"></div><div class="input-label"><label for="tunnelSection">巷道截面积(m^2):</label><input type="number" id="tunnelSection" step="0.01"></div><button onclick="calculateHoleCount()">计算</button><p><strong>炮孔数目:</strong> <span id="holeCount"></span></p></div><script>function calculateHoleCount() {const rockSolidity = parseFloat(document.getElementById('rockSolidity').value);const tunnelSection = parseFloat(document.getElementById('tunnelSection').value);if (isNaN(rockSolidity) || isNaN(tunnelSection)) {alert('请输入有效的数值');return;}const holeCount = Math.ceil(3.3 * Math.pow((rockSolidity * Math.pow(tunnelSection, 2)), 1/3));document.getElementById('holeCount').textContent = holeCount;}</script><p><img src="/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/Untitled.png" alt="Untitled"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;井巷掘进炮孔数目计算&quot;&gt;&lt;a href=&quot;#井巷掘进炮孔数目计算&quot; class=&quot;headerlink&quot; title=&quot;井巷掘进炮孔数目计算&quot;&gt;&lt;/a&gt;井巷掘进炮孔数目计算&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;岩石坚固性系数 &amp;#x2F;f&lt;</summary>
+      
+    
+    
+    
+    <category term="engineer" scheme="https://minipawl.com/categories/engineer/"/>
+    
+    
+    <category term="tools" scheme="https://minipawl.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跨境从业用到过的知识</title>
+    <link href="https://minipawl.com/2023/05/18/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/"/>
+    <id>https://minipawl.com/2023/05/18/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/</id>
+    <published>2023-05-18T16:54:39.000Z</published>
+    <updated>2023-06-09T13:49:19.361Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="跨境从业用到过的知识"><a href="#跨境从业用到过的知识" class="headerlink" title="跨境从业用到过的知识"></a>跨境从业用到过的知识</h1><h1 id="2，基础原理"><a href="#2，基础原理" class="headerlink" title="2，基础原理"></a>2，基础原理</h1><h2 id="2-1-基础知识幂函数的应用"><a href="#2-1-基础知识幂函数的应用" class="headerlink" title="2.1 基础知识幂函数的应用"></a>2.1 基础知识幂函数的应用</h2><ul><li><p>自变量 x 在底数的位置上，y&#x3D;x^a（a 不等于 1）. a 不等于 1，但可正可负，取不同的值，图像及性质是不一样的。</p><p>  高中数学里面，幂函数主要要掌握 a&#x3D;-1、2、3、1&#x2F;2 时的图像即可。其中当 a&#x3D;2 时， 函数是过原点的二次函数。 其他 a 值的图像可自己通过描点法画下并了解下基本图像的走向即可。</p></li><li><p>性质： 根据图象,幂函数性质归纳如下：</p><p>  （1）所有的幂函数在（0，+∞）都有定义，并且图象都过点 （1,1）； （2）当 a&gt;0 时，幂函数的图象通过原点，并且在区间[0,+ ∞)上是增函数． 特别地，当 a&gt;1 时，幂函数的图象下凸；当 0&lt;a&lt;1 时，幂函数的图象上凸；</p><p>  （3）当 a&lt;0 时，幂函数的图象在区间(0,+∞)上是减函数．在第一象限内， 当 x 从右边趋向原点时，图象在 y 轴右方无限地逼近 y 轴正半轴，当 x 趋 于+∞时，图象在轴 x 上方无限地逼近轴 x 正半轴。 指出：此时 y＝x0＝1；定义域为（－∞，0）∪（0，＋∞），特别强调， 当 x 为任何非零实数时，函数的值均为 1，图像是从点（0，1）出发，平行于 x 轴的两条射线，但点（0，1）要除外。</p></li></ul><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled.png" alt="Untitled"></p><h2 id="2-2-相关应用-长尾分布"><a href="#2-2-相关应用-长尾分布" class="headerlink" title="2.2 相关应用-长尾分布"></a>2.2 相关应用-长尾分布</h2><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%201.png" alt="Untitled"></p><p>A <strong>long tail distribution</strong> has tails that taper off gradually rather than drop off sharply. They are a subset of <a href="https://www.statisticshowto.com/heavy-tailed-distribution/">heavy-tailed distributions.</a> It’s easy to visualize the idea of a long tailed function, and slightly harder to make it concrete.</p><p>If we want to be rigorous, though, there is a exact mathematical definition of a long tailed function (Foss et. al, 2013):</p><p>(ultimately positive) <a href="http://ow.ly/jYdI30pBG6l">function</a> f is defined according to a <a href="https://calculushowto.com/limits/">limit</a> —a term introduced in <a href="https://calculushowto.com/">calculus</a>. Very basically, the limit tells you where the distribution converges to at a certain point. In this case, if the <a href="https://www.statisticshowto.com/ratios-and-rates/">ratio</a> of x + y and x converge to 1 as the x-values get much larger, then the distribution is long-tailed:</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%202.png" alt="Untitled"></p><p>e long tailed property of distributions carries over into many derivative distributions.</p><p>If f1, f2… fn are all long tailed, then:</p><p>Any distribution that can be expressed as a product of these, fx&#x3D; f1 · f2… · fn is also long tailed.</p><p>Any distribution that can be expressed as a linear combination of these is long tailed. That means that any function</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%203.png" alt="Untitled"></p><p>Commerce and marketing schemes often find that there sales can best be modeled by long tail distributions. For instance, an internet store may have certain items with very high sales (modeled by the center of the distribution curve) and a large number of items with much lower sales (modeled by the long tail).</p><p>Although the sales volume for every individual item in the tail may be negligible, there are enough items that they play a significant role in the general profit taking. In fact, the profit from low-sale volume items can rival or even sometimes leave in the dust the profit made from best-sellers—provided only the tail is long enough.</p><h2 id="2-3长尾分布应用在电商平台"><a href="#2-3长尾分布应用在电商平台" class="headerlink" title="2.3长尾分布应用在电商平台"></a>2.3长尾分布应用在电商平台</h2><h3 id="2-3-1-亚马逊平台"><a href="#2-3-1-亚马逊平台" class="headerlink" title="2.3.1 亚马逊平台"></a>2.3.1 亚马逊平台</h3><p>对于大部分的行业软件，如卖家精灵，数派，基本上是根据反比例函数结合机器学习来根据Bsr 排名的权重来反推销量。</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%204.png" alt="Untitled"></p><p>To people that don’t understand them, they manifest as ‘unfairness’, which they are. Unlike normal distributions, long tailed phenomena do not centre around a mid-point. They’re totally unsymmetrical and extreme events are rare, unpredictable but have gargantuan impacts when they eventually occur.</p><p>There are two models that we can use to map-out how these long-tailed distributions occur.</p><p><strong>Preferential attachment</strong>: Imagine a network consisting of nodes and connections between nodes. The more connected a node is, the more likely it is to receive new links [3].</p><p>Preferential attachment often plays out in social domains. Looking at Instagram as an example, if you think about accounts as nodes and followers as connections; the more followers an account has, the more likely it is to receive more followers. The distribution of followers across social media accounts is a likely long tailed.</p><p><strong>Self-organized Criticality</strong>: Imagine an empty N by N grid. A random site on the grid is chosen, if empty the site grows a tree with a probability g. If a site contains a tree lightening hits the site with a probability of (1-g). The lightening struck tree catches fire and the fire spreads to all connected trees[1].</p><p>In plain English, most forest fires are small but there exists a point where the forest becomes so dense that a fire could be gigantic.</p><p>Here’s a cool simulation of self-organized criticality playing out in the <a href="https://www.aryan.app/randomstuff/forestfire.html">forest fire model</a>.</p><p>Taking earthquakes as an example of a phenomenon that roughly follows a power law distribution with an exponent of 2[1].</p><p>An earthquake of magnitude 9 would be the size of the 2011 earthquake in Honshu Japan. It was estimated to have killed around 29,000 people and damaged nuclear reactors [5]. According to our assumptions about the distribution of earthquakes, an earthquake of this magnitude occurs with a probability of around one-in-a-million each day. Across 1 century this one in a million event has a probability of occurrence of around 3.5%.</p><p>Given the devastation that it could cause, suddenly this seems very concerning. It becomes even more so when you realise that the most earthquakes are between 5–5.9 on the Richter scale [6], a-thousand to ten-thousand times weaker than our one-in-a-million event.</p><p>Lack of awareness of long tailed phenomena will cause governments to be ill-prepared for these extreme events leading to mass destruction.</p><p>在亚马逊提供给我们的ABA数据中，也是可以根据ABA的排名进行搜索量反推的</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%205.png" alt="Untitled"></p><p>利用ABA数据反推市场容量就是利用这样的逻辑，从数据类型说，我们把定序尺度转化成了定比尺度。</p><h2 id="2-3-2-二项分布在广告的应用基础知识"><a href="#2-3-2-二项分布在广告的应用基础知识" class="headerlink" title="2.3.2 二项分布在广告的应用基础知识"></a>2.3.2 二项分布在广告的应用基础知识</h2><p>对于离散随机变量，有一个最重要的概率分布，它是 <strong>二项分布 (binomial distribution)</strong> 。二项分布处于二元数据。因为二元数据的情况非常多，所以二项分布使用频繁。</p><p>二项分布的三个要素。首先，试验现象有两种结果，并且成功概率是常量。这种实验被称为 <strong>伯努利试验验 (Bernoulli trial)</strong> 。其次，你观察试验结果 n 次。第三，你对成功的结果计数，记为 x 。这三个元素被结合成一个公式，它给出了在 n 次试验中取得特定数量成功结果的概率。公式如下：</p><p>$P (x) &#x3D; \frac {n!}{x!(n - x)!} p^x (1 - p)^{n-x}, x &#x3D; 0,1,2,…,n$</p><p>概率质量函数</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%206.png" alt="Untitled"></p><p>累积分布函数</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%207.png" alt="Untitled"></p><ul><li>二项分布是一个离散概率分布，用于只有两个独立互斥结果的随机变量 —— 成功或者失败。它给出了对于随机变量的 n 个结果，其中 x 个成功的概率。也叫做试验成功的概率。</li><li>二项分布假定所有试验的概率 p 都是固定的，它的均值等于 n 乘以 p ，标准差等于 n 乘以 p 乘以 (1 - p)，然后求平方根。</li><li>二项分布根据 p 的变化可以向右或者向左偏斜，或者对称。当 p 接近 0 时是右偏态，当 p 接近 1 时是左偏态。二项分布公式如下：</li></ul><p>$P (x) &#x3D; \frac {n!}{x!(n - x)!} p^x (1 - p)^{n-x}, x &#x3D; 0,1,2,…,n$</p><p>速记为 X∼B(N,P)</p><ul><li>二项分布的累积概率分布公式如下：</li></ul><p>$F (x) &#x3D; P (X \leq x) &#x3D; \sum_{k &#x3D; 0}^{x} \frac {n!}{k!(n - k)!} p^k (1 - p)^{n - k}$</p><h2 id="2-3-3-对广告点击和转化的运用"><a href="#2-3-3-对广告点击和转化的运用" class="headerlink" title="2.3.3 对广告点击和转化的运用"></a>2.3.3 对广告点击和转化的运用</h2><p>为了解释这个问题，我们依然要接受一个和现实不会完全相符的假设，即：一个产品的转化率不会因为客户的不同和时间的不同而发生变化。</p><p>对于产品转化率为10%的一个关键词，意味着每一次点击的并且出单的概率是10%，不出单的概率的90%。</p><p>在这样的假设下，广告的点击出单概率即转化率可以近似看成二项分布。</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%208.png" alt="Untitled"></p><ul><li>一个转化率10%的词究竟会在第几次出单？出单的概率多大？</li></ul><p>上图可以回答这个问题</p><ul><li><p>如果在某次点击后依旧没有出单，那么他为10%转化率的概率究竟还有多大？</p></li><li><p>EXCEL可以利用以下算法实现假设检验的概率计算</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=(IFERROR(BINOM.DIST(C$7,$B9,$C$5,FALSE),&quot;&quot;)</span><br></pre></td></tr></table></figure></li></ul><p>这里需要的就是假设检验，即假设转化率为10%的情况下，某个点击次数下，订单为具体数值的概率为多大。</p><ul><li><p>EXCEL可以利用以下算法实现假设检验的概率计算</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">=IF(</span><br><span class="line">(</span><br><span class="line">1-IF(</span><br><span class="line">C7&lt;=ROUNDUP(B7*$C$1,0),</span><br><span class="line">BINOM.DIST.RANGE(B7,$C$1,C7,ROUNDUP(B7*$C$1,0)),</span><br><span class="line">BINOM.DIST.RANGE(B7,$C$1,C7)))&lt;0.5,</span><br><span class="line">BINOM.DIST.RANGE(B7,$C$1,0,C7),</span><br><span class="line">1-IF(</span><br><span class="line">C7&lt;=ROUNDUP(B7*$C$1,0),</span><br><span class="line">BINOM.DIST.RANGE(B7,$C$1,C7,ROUNDUP(B7*$C$1,0)),</span><br><span class="line">BINOM.DIST.RANGE(B7,$C$1,C7)</span><br><span class="line">)</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li></ul><h3 id="2-3-4延申思考"><a href="#2-3-4延申思考" class="headerlink" title="2.3.4延申思考"></a>2.3.4延申思考</h3><p>由于概率分布的特性，现实中我们应该关注广告的累计转化率，而不是具体的某个时间点的分布，因为点击数较小的情况下，你求出来的转化率未必是产品的真实转化率。</p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%209.png" alt="Untitled"></p><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%2010.png" alt="Untitled"></p><p>在累计转化率相同的情况下，通过多次数据模拟也可以发现不一样的累计转化率走向，如果不理解这个道理，很容对表现相同的产品做出完全不同的方案。</p><h2 id="2-3-莱温斯特编辑距离和关键词相关性判断基础知识"><a href="#2-3-莱温斯特编辑距离和关键词相关性判断基础知识" class="headerlink" title="2.3 莱温斯特编辑距离和关键词相关性判断基础知识"></a>2.3 莱温斯特编辑距离和关键词相关性判断基础知识</h2><p><strong>莱文斯坦距离</strong>，又称Levenshtein距离，是<strong>编辑距离</strong>（edit distance）的一种。是描述由一个字串转化成另一个字串<strong>最少</strong>的编辑操作次数，其中的操作包括<strong>插入</strong>、<strong>删除</strong>和<strong>替换。</strong></p><p><strong>举例：</strong></p><ul><li>例如将kitten一字转成sitting：</li><li>sitten（k替换为→s）</li><li>sittin （e替换为→i）</li><li>sitting （添加→g）</li><li>那么二者的编辑距离为3。</li></ul><p>通过和字符串长度建立相对距离，可以帮助我们判断相似性</p><h2 id="2-3-1-实际应用"><a href="#2-3-1-实际应用" class="headerlink" title="2.3.1 实际应用"></a>2.3.1 实际应用</h2><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%2011.png" alt="Untitled"></p><ul><li><p>VBA代码</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">Function Levenshtein3(ByVal string1 As String, ByVal string2 As String) As Long</span><br><span class="line"></span><br><span class="line">Dim i As Long, j As Long, string1_length As Long, string2_length As Long</span><br><span class="line"></span><br><span class="line">Dim distance(0 To 60, 0 To 50) As Long, smStr1(1 To 60) As Long, smStr2(1 To 50) As Long</span><br><span class="line"></span><br><span class="line">Dim min1 As Long, min2 As Long, min3 As Long, minmin As Long, MaxL As Long</span><br><span class="line"></span><br><span class="line">string1_length = Len(string1):  string2_length = Len(string2)</span><br><span class="line"></span><br><span class="line">distance(0, 0) = 0</span><br><span class="line">For i = 1 To string1_length:    distance(i, 0) = i: smStr1(i) = Asc(LCase(Mid$(string1, i, 1))): Next</span><br><span class="line">For j = 1 To string2_length:    distance(0, j) = j: smStr2(j) = Asc(LCase(Mid$(string2, j, 1))): Next</span><br><span class="line">For i = 1 To string1_length</span><br><span class="line">    For j = 1 To string2_length</span><br><span class="line">        If smStr1(i) = smStr2(j) Then</span><br><span class="line">            distance(i, j) = distance(i - 1, j - 1)</span><br><span class="line">        Else</span><br><span class="line">            min1 = distance(i - 1, j) + 1</span><br><span class="line">            min2 = distance(i, j - 1) + 1</span><br><span class="line">            min3 = distance(i - 1, j - 1) + 1</span><br><span class="line">            If min2 &lt; min1 Then</span><br><span class="line">                If min2 &lt; min3 Then minmin = min2 Else minmin = min3</span><br><span class="line">            Else</span><br><span class="line">                If min1 &lt; min3 Then minmin = min1 Else minmin = min3</span><br><span class="line">            End If</span><br><span class="line">            distance(i, j) = minmin</span><br><span class="line">        End If</span><br><span class="line">    Next</span><br><span class="line">Next</span><br><span class="line"></span><br><span class="line">&#x27; Levenshtein3 will properly return a percent match (100%=exact) based on similarities and Lengths etc...</span><br><span class="line"></span><br><span class="line">MaxL = string1_length:</span><br><span class="line">If string2_length &gt; MaxL Then MaxL = string2_length</span><br><span class="line">Levenshtein3 = 100 - CLng((distance(string1_length, string2_length) * 100) / MaxL)</span><br><span class="line"></span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">Function Levenshtein(ByVal string1 As String, ByVal string2 As String) As Long</span><br><span class="line"></span><br><span class="line">Dim i As Long, j As Long</span><br><span class="line">Dim string1_length As Long</span><br><span class="line">Dim string2_length As Long</span><br><span class="line">Dim distance() As Long</span><br><span class="line"></span><br><span class="line">string1_length = Len(string1)</span><br><span class="line">string2_length = Len(string2)</span><br><span class="line">ReDim distance(string1_length, string2_length)</span><br><span class="line"></span><br><span class="line">For i = 0 To string1_length</span><br><span class="line">    distance(i, 0) = i</span><br><span class="line">Next</span><br><span class="line"></span><br><span class="line">For j = 0 To string2_length</span><br><span class="line">    distance(0, j) = j</span><br><span class="line">Next</span><br><span class="line"></span><br><span class="line">For i = 1 To string1_length</span><br><span class="line">    For j = 1 To string2_length</span><br><span class="line">        If Asc(Mid$(string1, i, 1)) = Asc(Mid$(string2, j, 1)) Then</span><br><span class="line">            distance(i, j) = distance(i - 1, j - 1)</span><br><span class="line">        Else</span><br><span class="line">            distance(i, j) = Application.WorksheetFunction.Min _</span><br><span class="line">            (distance(i - 1, j) + 1, _</span><br><span class="line">             distance(i, j - 1) + 1, _</span><br><span class="line">             distance(i - 1, j - 1) + 1)</span><br><span class="line">        End If</span><br><span class="line">    Next</span><br><span class="line">Next</span><br><span class="line"></span><br><span class="line">Levenshtein = distance(string1_length, string2_length)</span><br><span class="line"></span><br><span class="line">End Function</span><br></pre></td></tr></table></figure></li></ul><h2 id="2-3-2-延申探讨"><a href="#2-3-2-延申探讨" class="headerlink" title="2.3.2 延申探讨"></a>2.3.2 延申探讨</h2><p>常见的语义的相似度分析</p><ul><li>Word co-occurrence methods</li><li>Similarity based on a lexical database</li><li>Method based on web search engine results</li></ul><p><img src="/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/Untitled%2012.png" alt="Untitled"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;跨境从业用到过的知识&quot;&gt;&lt;a href=&quot;#跨境从业用到过的知识&quot; class=&quot;headerlink&quot; title=&quot;跨境从业用到过的知识&quot;&gt;&lt;/a&gt;跨境从业用到过的知识&lt;/h1&gt;&lt;h1 id=&quot;2，基础原理&quot;&gt;&lt;a href=&quot;#2，基础原理&quot; class=&quot;</summary>
+      
+    
+    
+    
+    <category term="data" scheme="https://minipawl.com/categories/data/"/>
+    
+    
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
+    
+    <category term="跨境" scheme="https://minipawl.com/tags/%E8%B7%A8%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How do I think “Reading”</title>
+    <link href="https://minipawl.com/2023/04/23/How%20do%20I%20think%20%E2%80%9CReading%E2%80%9D/"/>
+    <id>https://minipawl.com/2023/04/23/How%20do%20I%20think%20%E2%80%9CReading%E2%80%9D/</id>
+    <published>2023-04-23T10:54:39.000Z</published>
+    <updated>2023-06-09T12:04:06.516Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="How-do-I-think-“Reading”"><a href="#How-do-I-think-“Reading”" class="headerlink" title="How do I think “Reading”"></a>How do I think “Reading”</h1><p><strong>Concept</strong></p><p>Before discussing a concept, let’s first define its connotation, extension, and the boundaries of the discussion. My understanding of “reading” is: as a behavior, obtaining information through text-based media. This information may not have an effect on you.</p><ol><li><strong>Text-based media</strong></li><li><strong>Obtaining information</strong></li><li><strong>Such information may have an impact</strong></li></ol><p>Example 1: A physics book will tell you the mechanical reasons for the movement of objects. If you start reading, there may be the following outcomes:</p><p>—<strong>You don’t understand at all</strong></p><p>In this case, you are just “looking” at the book, which is not reading. Even if you look at it for ten years, reading hasn’t started yet.</p><p>—<strong>You understand, acquire knowledge of mechanics, and comprehend the principles of object movement</strong></p><p>In this case, you are “reading.” Perhaps you can understand why high-speed cars have a long braking distance, and why bicycles don’t fall over. Whether or not you can invent a product like a “bicycle” is an unknown!</p><p>“<strong>To read or not to read”</strong></p><p>First, we need to rule out the “don’t understand” problem because that’s not considered reading. Personally, I categorize reading into three types:</p><ol><li><p>Reading as input, outputting some unpredictable results through the brain’s exploration.</p><p> This is generally referred to as inspiring thinking. Your input may be controlled by others, such as educational reading clubs or recommendations from others. This is more like the popular AI language models.</p><p> Pros: It may create a wonderful chemical reaction; perhaps you’ll have an epiphany after reading.</p><p> Cons: If the input is single or even controlled, the output will also be single, perhaps a form of “brainwashing.”</p><p> Advice: If you are often passively required to read, you can explore different types or even completely opposite ones. For example, pairing mainstream books with “banned books.”</p></li><li><p>Reading as a tool, flipping through books for a specific goal or problem, thus achieving a problem-solving result.</p><p> This is a more practical method I use. You could say “every book is beneficial,” but it’s very utilitarian.</p><p> Pros: Books offer a more systematic and accurate explanation of the problem. And it can solve the problem relatively quickly. Especially for broad issues, this method can help you enter the relevant field fastest.</p><p> Cons: Poor timeliness, especially for cutting-edge problems. For some specific issues, forums may be more efficient.</p><p> Advice: Stay sensitive and be sure to understand the background of the book first.</p></li><li><p>Reading as a habit, similar to watching TV.</p><p> I admire those who make reading a habit, especially for non-fiction books. The input of information is not a pleasant process. This type of “reading” might be driven by the dopamine rush from entertaining novel reading or the habit of reading by successful people…</p><p> Advice: No advice, as I have little exposure to this.</p></li></ol><p>In summary, if you:</p><ol><li>Don’t expect yourself to have “output,” let alone transform yourself</li><li>Don’t have a problem that needs solving and don’t like solving problems yourself</li></ol><p>Then there is no need to read.</p><p><strong>Suggestions</strong></p><p>We all live in an environment where high-quality information is scarce. As a method of obtaining information, <strong>reading can be considered the most effective means.</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;How-do-I-think-“Reading”&quot;&gt;&lt;a href=&quot;#How-do-I-think-“Reading”&quot; class=&quot;headerlink&quot; title=&quot;How do I think “Reading”&quot;&gt;&lt;/a&gt;How do I think</summary>
+      
+    
+    
+    
+    <category term="personal" scheme="https://minipawl.com/categories/personal/"/>
+    
+    
+    <category term="Reading" scheme="https://minipawl.com/tags/Reading/"/>
+    
+    <category term="Life" scheme="https://minipawl.com/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据局限性的思考</title>
+    <link href="https://minipawl.com/2023/04/08/%E6%95%B0%E6%8D%AE%E5%B1%80%E9%99%90%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <id>https://minipawl.com/2023/04/08/%E6%95%B0%E6%8D%AE%E5%B1%80%E9%99%90%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83/</id>
+    <published>2023-04-08T16:54:39.000Z</published>
+    <updated>2023-06-09T12:05:40.818Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数据局限性的思考"><a href="#数据局限性的思考" class="headerlink" title="数据局限性的思考"></a>数据局限性的思考</h1><h2 id="亚马逊的算法与用户体验"><a href="#亚马逊的算法与用户体验" class="headerlink" title="亚马逊的算法与用户体验"></a>亚马逊的算法与用户体验</h2><p>亚马逊电商平台服务对象是它的用户，所以它的算法必然是为用户的体验服务</p><p>即：用最快的时间买到想要的性价比高的产品，并且给亚马逊带来正向收益，飞轮效应</p><p>我们和亚马逊客户之间始终隔阂亚马逊算法，如果算法真的完全满足它的初始设定，那么你满足算法需求等于满足用户需求</p><p>这个隔阂距离无法完全消除但会逐渐减小</p><p>反过来看，算法并不只是遵从用户习惯，也能影响用户习惯（商业目的），这是一个博弈过程</p><h3 id="数据的局限性"><a href="#数据的局限性" class="headerlink" title="数据的局限性"></a>数据的局限性</h3><p>数据的局限性来源于数据样本的有限而非数据本身，所以通过有限的数据观察一定要注意它的边界。</p><p>对卖家来说，算法本身是黑箱，即便有专利可以参考，但你无法确认亚马逊是否用了该专利以及部署时候的调参，同样的逻辑不同的参数也是不同的结果。</p><p>是否还记得“火鸡”的故事？</p><p>在火鸡饲养场里，有一只火鸡发现，第一天上午9点钟主人给它喂食。然而作为一个卓越的归纳主义者，它并不马上作出结论。它一直等到已收集了有关上午9点给它喂食这一经验事实的大量观察；而且，它是在多种情况下进行这些观察的：雨天和晴天，热天和冷天，星期三和星期四……它每天都在自己的记录表中加进新的观察陈述。最后，它的归纳主义良心感到满意，它进行归纳推理，得出了下面的结论：“主人总是在上午9点钟给我喂食。”可是，事情并不像它所想像的那样简单和乐观。在圣诞节前夕，当主人没有给它喂食，而是把它宰杀的时候，它通过归纳概括而得到的结论终于被无情地推翻了。大概火鸡临终前也会因此而感到深深遗憾。</p><h3 id="数学角度的理解"><a href="#数学角度的理解" class="headerlink" title="数学角度的理解"></a>数学角度的理解</h3><p>假设有三个可能行的数学公式，你需要确认</p><p>y&#x3D;x</p><p>y&#x3D;x^2</p><p>y&#x3D;x^3</p><p>也许你善于观察的x,y变化，但在x 属于 0.9999到1.0001之间，这三个函数的差距很小，你也许在0.9999到1.0001之间观察到了几十万个sample.但是数据的“质量”堪忧，你无法得到好的结果。</p><ul><li>多数据优于好模型</li><li>好数据优于多数据</li><li>二八原则</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;数据局限性的思考&quot;&gt;&lt;a href=&quot;#数据局限性的思考&quot; class=&quot;headerlink&quot; title=&quot;数据局限性的思考&quot;&gt;&lt;/a&gt;数据局限性的思考&lt;/h1&gt;&lt;h2 id=&quot;亚马逊的算法与用户体验&quot;&gt;&lt;a href=&quot;#亚马逊的算法与用户体验&quot; class</summary>
+      
+    
+    
+    
+    <category term="data" scheme="https://minipawl.com/categories/data/"/>
+    
+    
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>非CS背景入门机器学习</title>
+    <link href="https://minipawl.com/2023/04/08/%E9%9D%9ECS%E8%83%8C%E6%99%AF%E5%85%A5%E9%97%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://minipawl.com/2023/04/08/%E9%9D%9ECS%E8%83%8C%E6%99%AF%E5%85%A5%E9%97%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-04-08T16:54:39.000Z</published>
+    <updated>2023-06-09T12:05:55.421Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="非CS背景入门机器学习"><a href="#非CS背景入门机器学习" class="headerlink" title="非CS背景入门机器学习"></a>非CS背景入门机器学习</h1><p>把机器学习作为一种工具，而不是去搭建机器学习本身需要的代码。Matlab, Python skilearn直接调用相关机器学习的模型即可。</p><p><strong>我认为用于解决业务问题的机器学习（甚至深度学习，加强学习）应用的核心问题</strong></p><p><strong>商业认知：</strong></p><ol><li>识别业务问题，写出从输入的数据到推出结果的逻辑轨迹（即特征如何得到结果？）</li><li>把实际的具体问题抽象为数学问题（即找到目标函数是什么？）</li></ol><p><strong>技术操作：</strong></p><ol><li>完成目标函数需要什么模型？</li><li>现有数据是什么样的，如何挖掘特征值（如是否需要PCA?）</li><li>机器学习模型调用</li><li>模型评价</li><li>调优，再回到4直到满意</li></ol><p>机器学习核心还是回归与分类，核心思想是概率统计，核心解决方案是矩阵算法。</p><ul><li>“多数据优于好模型</li><li>好数据优于多数据</li><li>二八原则”</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;非CS背景入门机器学习&quot;&gt;&lt;a href=&quot;#非CS背景入门机器学习&quot; class=&quot;headerlink&quot; title=&quot;非CS背景入门机器学习&quot;&gt;&lt;/a&gt;非CS背景入门机器学习&lt;/h1&gt;&lt;p&gt;把机器学习作为一种工具，而不是去搭建机器学习本身需要的代码。Matl</summary>
+      
+    
+    
+    
+    <category term="engineer" scheme="https://minipawl.com/categories/engineer/"/>
+    
+    
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL学习记录</title>
+    <link href="https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>https://minipawl.com/2023/01/09/SQL%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-01-09T09:37:13.000Z</published>
+    <updated>2023-06-09T12:06:37.141Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><p><code>SELECT</code></p><p><code>COLUMNS</code></p><p><code>FROM</code> </p><p><code>TABLE</code> JOIN TABKE JOIN </p><p><code>WHERE</code></p><p><code>GROUP BY</code></p><p><code>HAVING</code></p><p>3 聚合与排序</p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled.png" alt="Untitled"></p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%201.png" alt="Untitled"></p><p><strong>count 计算列时不会计算NULL, 计算*时 返回所有的行数</strong></p><hr><p>聚合函数一般不会计算NULL值</p><p>SUM and average is only used for numerical data while the MAX and MIN are available for any data</p><hr><p>Group by</p><p>GROUP BY 子句的书写位置也有严格要求，一定要写在 FROM 语句之后（如果有 WHERE 子句的话需要写在 WHERE 子句之后）。</p><hr><p>当聚合键中包含 NULL 时，也会将NULL 作为一组特定的数据</p><p>FROM to  where to group by to having to select</p><p>FROM → WHERE → GROUP BY → SELECT</p><hr><p>使用聚合函数时， SELECT 子句中只能存在以下三种</p><p>元素。</p><p>●常数</p><p>●聚合函数</p><p>● GROUP BY子句中指定的列名（也就是聚合键）</p><hr><p>ROUP BY 子句的结果通常都包含多行，有时可能还会是成百上千行。那么，这些结果究竟是按照什么顺序排列的呢？</p><p>答案是：“随机的。”</p><p>我们完全不知道结果记录是按照什么规则进行排序的。可能乍一看是按照行数的降序或者聚合键的升序进行排列的，但其实这些全都是偶然的。</p><p>当你再次执行同样的 SELECT 语句时，得到的结果可能会按照完全不同的顺序进行排列。</p><p>通常 SELECT 语句的执行结果的显示顺序都是随机的，因此想要按照某种特定顺序进行排序的话， 需要在 SELECT 语句中进行指定。</p><hr><p>只有子句SELECT和子句HAVIING（以及子句ORDER BY）中能够使用聚合函数.</p><hr><p>WHERE 子句 &#x3D; 指定行所对应的条件</p><p>HAVING 子句 &#x3D; 指定组所对应的条件</p><hr><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%202.png" alt="Untitled"></p><hr><p>3-4 第3章　聚合与排序 对查询结果进行排序</p><p>在 GROUP BY 子句中不能使用</p><p>SELECT 子句中定义的别名，但是在 ORDER BY 子句中却是允许使用别</p><p>名的。因此，代码清单 3-32 中的 SELECT 语句并不会出错，可正确执行。</p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%203.png" alt="Untitled"></p><p>在子句中可以使用子句中未使用的列和聚合函数。</p><hr><hr><p>4 数据的更新</p><p>数据的更新处理</p><p>大体可以分为插入（ INSERT）、删除（ DELETE）和更新（ UPDATE）三类。</p><p>管理数据更新的重要概念——事务。</p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%204.png" alt="Untitled"></p><p>对表进行全列 INSERT 时，可以省略表名后的列清单。这时 VALUES</p><p>子句的值会默认按照从左到右的顺序赋给每一列。因此，代码清单 4-3 中</p><p>的两个 INSERT 语句会插入同样的数据</p><hr><p>INSERT 语句中想给某一列赋予 NULL 值时，可以直接在 VALUES</p><p>子句的值清单中写入 NULL。例如，要向 purchase_price 列（进货</p><p>单价）中插入 NULL，就可以使用代码清单 4-4 中的 INSERT 语句。</p><hr><p>INSERT INTO A (cola,colb)</p><p>select</p><p>colc cold</p><p>FROM</p><p>C</p><p><code>INSERT INTO ProductType (product_type, sum_sale_price,</code> </p><p><code>sum_purchase_price)</code></p><p><code>SELECT product_type, SUM(sale_price), SUM(purchase_price)</code></p><p><code>FROM Product</code></p><p><code>GROUP BY product_type;</code></p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%205.png" alt="Untitled"></p><p>update table</p><p>set a &#x3D; vb</p><p>where dd</p><hr><p>事务是需要在同一个处理单元中执行的一系列更新处理的集合。</p><p><code>START TRANSACTION;</code></p><ul><li><code>- 将运动T恤的销售单价降低1000日元</code></li></ul><p><code>UPDATE Product</code></p><p><code>SET sale_price = sale_price - 1000</code></p><p><code>WHERE product_name = &#39;运动T恤&#39;;</code></p><ul><li><code>- 将T恤衫的销售单价上浮1000日元</code></li></ul><p><code>UPDATE Product</code></p><p><code>SET sale_price = sale_price + 1000</code></p><p><code>WHERE product_name = &#39;T恤衫&#39;;</code></p><p>事务 没懂</p><hr><hr><p>5 复杂查询</p><p>5.1 视图</p><p>视图的限制① ——定义视图时不能使用ORDER BY子句</p><p>视图的限制② ——对视图进行更新</p><p>—视图和表需要同时进行更新，因此通过汇总得到的视图无法进行更新。</p><p>5.2 标量子查询</p><p>标量子查询就是返回单一值的子查询。</p><p>用于解决where无法应用于聚合函数的缺点，但同时标量子查询不能返回多行结果</p><hr><p>5.3 关联子查询</p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%206.png" alt="Untitled"></p><hr><hr><p>6 函数 谓词 CASE表达式</p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%207.png" alt="Untitled"></p><p>SUBSTRING</p><p>UPPER, LOWER,EXTRACT,REPLACE LENGTH</p><hr><p>6.2 PREDICATE</p><p>IN </p><p>EXIST</p><p><img src="/SQL%20%E5%AD%A6%E4%B9%A0%20924caefcd97d4ceda7f8b1e24b3bfae6/Untitled%208.png" alt="Untitled"></p><p>6.3 CASE 表达式</p><p><code>CASE WHEN &lt;求值表达式&gt; THEN &lt;表达式&gt;</code></p><p><code>WHEN &lt;求值表达式&gt; THEN &lt;表达式&gt;</code></p><p><code>WHEN &lt;求值表达式&gt; THEN &lt;表达式&gt;</code></p><p><code>.</code></p><p><code>.</code></p><p><code>.</code></p><p><code>ELSE &lt;表达式&gt;</code></p><p><code>END</code></p><p>case when a&gt;b then c else end as inter</p><p><strong>7 集合运算</strong></p><p>7.1 表的加减法</p><p>7.2 表关联</p><p>使用联结时子句中的列需要按照“表的别名.列名”的格式进行书写。</p><p>INNER JOIN</p><p>OUTER JOIN</p><p>CROSS JOIN</p><p><strong>8 SQL高级处理</strong></p><p>RANK</p><p>ROW_NUMBERS</p><p>DENSE_RANK</p><p><code>OVER</code> 子句用于在聚合函数中使用窗口函数。窗口函数可以在不妨碍查询结果的情况下，对行进行排序并进行聚合计算。<code>OVER</code> 子句的语法如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;aggregate_function&gt; OVER (</span><br><span class="line">  [PARTITION BY &lt;column_name&gt;]</span><br><span class="line">  [ORDER BY &lt;column_name&gt; [ASC|DESC]]</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>其中：</p><ul><li><code>&lt;aggregate_function&gt;</code>：聚合函数的名称。</li><li><code>&lt;column_name&gt;</code>：要分组、排序或聚合的列名。</li><li><code>PARTITION BY</code>：指定一个分组列的名称，用于将数据分组。</li><li><code>ORDER BY</code>：指定一个排序列的名称，用于对分组数据进行排序。可以选择按升序（ASC）或降序（DESC）进行排序。</li></ul><p>例如，以下 SQL 查询语句使用 <code>OVER</code> 子句计算每个客户的销售总额和平均销售额，以及每个客户的销售总额在所有客户中所占的百分比：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">  customer_id,</span><br><span class="line">  SUM(sales_amount) OVER (PARTITION BY customer_id) total_sales_amount,</span><br><span class="line">  AVG(sales_amount) OVER (PARTITION BY customer_id) avg_sales_amount,</span><br><span class="line">  100.0 * SUM(sales_amount) OVER (PARTITION BY customer_id) / SUM(sales_amount) OVER () sales_amount_percentage</span><br><span class="line">FROM</span><br><span class="line">  sales;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>该查询语句使用 <code>PARTITION BY</code> 子句将数据按客户 ID 分组，然后使用 <code>SUM</code> 和 <code>AVG</code> 聚合函数计算每个客户的销售总额和平均销售额。最后，使用 <code>OVER</code> 子句计算每个客户的销售总额在所有客户中所占的百分比。</p><hr><p>系统性的学习某一门电脑语言对构建逻辑思维还是非常有用的</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;基础语法&quot;&gt;&lt;a href=&quot;#基础语法&quot; class=&quot;headerlink&quot; title=&quot;基础语法&quot;&gt;&lt;/a&gt;基础语法&lt;/h1&gt;&lt;p&gt;&lt;code&gt;SELECT&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;COLUMNS&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;F</summary>
+      
+    
+    
+    
+    <category term="data" scheme="https://minipawl.com/categories/data/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>给毕业生初次择业时建议</title>
+    <link href="https://minipawl.com/2023/01/08/How%20to%20select%20your%20path/"/>
+    <id>https://minipawl.com/2023/01/08/How%20to%20select%20your%20path/</id>
+    <published>2023-01-08T17:54:39.000Z</published>
+    <updated>2023-06-09T12:05:12.507Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="给毕业生初次择业时建议"><a href="#给毕业生初次择业时建议" class="headerlink" title="给毕业生初次择业时建议"></a>给毕业生初次择业时建议</h1><p><em>择路常见逻辑</em></p><p><em>逻辑1：选择好了行业及行业下细分领域，打造自己的竞争优势进入该行业。比如进大厂，考编等</em></p><p><em>逻辑2：根据自己的能力，确认匹配不同行业可有的相对优势，再进入行业</em></p><p><em>本教程符合逻辑2的择路参考。</em></p><p><em>无论是自身，还是身边人经历。毕业求职时候大家想的第一件事就是写简历，简历无非就是列举自己学习的课程，接下来就陷入到”绝境”- 没啥技能，没有奖项。总之就是不知道怎么写。 不敢批判说这是一个思维误区，但确实很多人没有考虑清楚这其中的逻辑，比如，你有没有思考过这个问题</em></p><p><em>“企业看你的简历是干嘛的？”</em></p><p><em>按照产品思维理解，在求职过程中，企业是你的“客户”，而你是“产品”。你在求职的过程就好像卖”洁厕灵“的商家把产品卖给客户，“简历”就是宣传广告，如洁厕灵的广告告诉客户为什么它值得选择。</em></p><p><em>如果你来写洁厕灵的广告文案，是不是该想想</em></p><p><em>1，哪些人需要洁厕灵？</em></p><p><em>2，他们用洁厕灵解决哪些问题？</em></p><p><em>3，如何让他们看到洁厕灵的优点并且<strong>相信？</strong></em></p><p><em>4，如何让他们心动购买？</em></p><p><em>按照这个逻辑，整个过程是不是，先了解客户，再针对他们的痛点打造自己的相对优势？</em></p><p><em>但实际上对于毕业生来说，除非他们大学就接触商业环境，否则了解企业对他们来说不现实。对此，我们采用逆向思维，先找到自己的优势，再找能发挥相对优势的企业呢？进入正文，分三个部分，第一部分是梳理自身的能力。第二部分：如何让自身能力变成优势，并且获得信任。第三部分：选择企业并且面试准备。</em></p><h1 id="1-梳理自身能力所在"><a href="#1-梳理自身能力所在" class="headerlink" title="1. 梳理自身能力所在"></a>1. 梳理自身<strong>能力所在</strong></h1><p>能力&#x3D;知识+技术</p><p>之所以写这样一个公式，是为了提醒“知识和技术是不可以完全混为一谈的”，这里就不谈异同点。但是普遍来说，毕业生会处于知识&gt;技术&#x3D;0 的处境。所以被问会什么的时候，他们无法说会某种知识。知识可以创造工具，解决问题的是工具，知识无法直接解决问题（商业环境）</p><p>知识可以创造工具，解决问题的是工具。能理解这句话，就知道什么是自己的“能力”了。</p><h2 id="1-1-已经有的知识或者技术"><a href="#1-1-已经有的知识或者技术" class="headerlink" title="1.1 已经有的知识或者技术"></a>1.1 已经有的知识或者技术</h2><h3 id="1-1-1-自己知道自己有的"><a href="#1-1-1-自己知道自己有的" class="headerlink" title="1.1.1 自己知道自己有的"></a>1.1.1 自己知道自己有的</h3><p>列学过的课程似乎是一个有效的方法，但是这解决不了你认知问题。打开你的课本，看前言，学校为什么会开设这门课？有些书本甚至会直接写“学完本门课程，你将获得xxxxx技能”, 这不就是你会的技能吗？</p><h3 id="1-1-2-自己不知道自己掌握的"><a href="#1-1-2-自己不知道自己掌握的" class="headerlink" title="1.1.2 自己不知道自己掌握的"></a>1.1.2 自己不知道自己掌握的</h3><p>1.1.1中说的是你在学校期间必然接触过的，然而人很难知道自己不知道的事-乔哈里之窗。有哪些东西你掌握了却没有意识到呢？</p><h2 id="1-2-能迅速掌握的技能（知识）"><a href="#1-2-能迅速掌握的技能（知识）" class="headerlink" title="1.2 能迅速掌握的技能（知识）"></a>1.2 能迅速掌握的技能（知识）</h2><p>你展现的能力&#x3D;你所具备的能力+进入行业前学到的能力</p><h1 id="2-把能力变为优势"><a href="#2-把能力变为优势" class="headerlink" title="2. 把能力变为优势"></a>2. 把能力变为优势</h1><p>简而言之，你已经知道了自己能力所在。怎么让别人相信？如何超过竞争者？</p><p>企业选择人的逻辑是“变现”，往往追求的是最低的成本找到最合适的人。所以，如果你被某公司录取了，不一定是你最优秀，可能你是优秀的人里面最廉价的。</p><p>怎么让别人相信</p><p><del>1，学校本身，清华出来的再拉跨，别人也愿意相信他有能力</del></p><p>2， 项目经验，你做过的事情，遵顼SMART原则最佳</p><p>3，证书加持</p><p>但这些只能提高别人相信你的概率，而不是绝对的。到底怎么定义你有没有能力？除非你会做题就被接受否则有没有能力在入职之前是一个玄学问题。让别人相信你有某种能力才是待解决的问题。</p><h1 id="3-选择企业"><a href="#3-选择企业" class="headerlink" title="3.选择企业"></a>3.选择企业</h1><p>现在环境很有趣，怎么说呢？求职者觉得“90%的公司都配不上他们”，企业觉得“90%的求职者不配进去”</p><p>言归正传，我们先设定好前题，刚才梳理的能力和优势可以足够让我们进入某行业。在确定的行业中如何选择企业呢？</p><p>存量市场中，大家没得选，一个萝卜一个坑，就算你会卖屁股也没门。仅仅在增量市场才会有选择的机会。当然现在我所处的行业及个人眼界，并没有看到太多的增量市场。</p><table><thead><tr><th>公司评分</th><th>流水类</th><th>探索类</th></tr></thead><tbody><tr><td>创业型（有人投资的初创公司）</td><td>5</td><td>6</td></tr><tr><td>私营型</td><td>1</td><td>4</td></tr><tr><td>名企</td><td>10</td><td>10</td></tr><tr><td>外包服务</td><td>5</td><td>7</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><h1 id="4-准备面试"><a href="#4-准备面试" class="headerlink" title="4.准备面试"></a>4.准备面试</h1><p>4.1 准备简历</p><p>没错，简历是在准备面试环节，你是根据1，2，3来做好简历。</p><p>亚马逊的STAR面试法则</p><p>亚马逊的STAR面试法则是指:</p><p>Situation(情况):面试官会提出一个你曾经遇到的棘手情况,并要求你描述这个情况。</p><p>Task(任务):然后要求你描述在那个情况下你需要完成的任务和目标。</p><p>Action(行动):之后会问你当时采取了什么具体行动和步骤来完成任务和目标。</p><p>Result(结果):最后会询问最终取得的结果和收获如何。</p><p>这是一个比较流行的行为面试法,通过让候选人举例并描述一个真实的工作场景来评估他的思维模式、问题解决能力和工作表现。</p><p>针对STAR面试法则,有几点准备建议:</p><ol><li>准备3-4个能突出你的技能和业绩的例子。例如项目管理、客户服务、团队协作等。</li><li>对每个例子掌握Slovak,也就是清楚地描述情景、任务、行动和结果。</li><li>采用CAR原则,先描述背景Situation和任务Task,再说明你的Actions行动,最后总结Results结果。这是一个清晰的逻辑链条。</li><li>对结果重点说明你取得的业绩和收益,如节省资源、提高质量、改善用户体验等。</li><li>要选择恰当的例子来回答不同的提问。展现你不同场景和角色下的表现。</li><li>个人在回答中融入国际视野和影响力。即使在较小范围的例子中也体现出较大的关联影响和收益。</li><li>在STAR例子中体现出你的Leadership和全局性思维。不必一定是大公司或大项目,在有限的范围内也可以发挥领导作用。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;给毕业生初次择业时建议&quot;&gt;&lt;a href=&quot;#给毕业生初次择业时建议&quot; class=&quot;headerlink&quot; title=&quot;给毕业生初次择业时建议&quot;&gt;&lt;/a&gt;给毕业生初次择业时建议&lt;/h1&gt;&lt;p&gt;&lt;em&gt;择路常见逻辑&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;逻辑1：选择好</summary>
+      
+    
+    
+    
+    <category term="personal" scheme="https://minipawl.com/categories/personal/"/>
+    
+    
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阅读分享</title>
+    <link href="https://minipawl.com/2023/01/08/%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95%20e89e40518e374ce18f9237b2738d4c56/"/>
+    <id>https://minipawl.com/2023/01/08/%E9%98%85%E8%AF%BB%E6%B8%85%E5%8D%95%20e89e40518e374ce18f9237b2738d4c56/</id>
+    <published>2023-01-08T17:54:39.000Z</published>
+    <updated>2023-06-09T21:11:44.022Z</updated>
+    
+    <content type="html"><![CDATA[<p>Name,状况<br>穿越非洲两百年,已完成<br>峰值体验,已完成<br>金字塔原理,已完成<br>论战略,已完成<br>真希望我父母读过这本书,已完成<br>资本无眠你可眠,已完成<br>世界上最简单的会计书,已完成<br>中国剩女调查,已完成<br>波特竞争系列2本,已完成<br>模型思维 佩奇,已完成<br>信息与噪音-Nate Silver,已完成<br>影响力,已完成<br>商业洞察力-刘润,已完成<br>引爆点,已完成<br>穷查理宝典,已完成<br>热点,已完成<br>底层逻辑-刘润,已完成<br>好战略，坏战略,已完成<br>结构化战略思维,已完成<br>逻辑思维,已完成<br>思维模型-西村克己,已完成<br>光环效应,已完成<br>直击本质-艾菲,已完成<br>黑天鹅-纳西姆,已完成<br>非对称风险-纳西姆,已完成<br>随机漫步的傻子-纳西姆,已完成<br>反脆弱-纳西姆,已完成<br>客户数据分析-CPDA,已完成<br>供应链与投资组合-CPDA,已完成<br>数据分析基础-CPDA,已完成<br>噪声,已完成<br>上游思维,已完成<br>与运气竞争,已完成<br>简化,已完成<br>GTD,已完成<br>规模,已完成<br>超预测,已完成<br>浪潮之巅,未开始<br>全球科技通史,未开始<br>皖南事变,在阅读<br>怪诞行为学,在阅读<br>俞军产品方法论,在阅读<br>中国近现代史,在阅读<br>资中筠选集,在阅读<br>文明的故事,在阅读<br>单词的历史,在阅读<br>胡适留学笔记,在阅读<br>非洲现代史,在阅读<br>信息传 吴军,在阅读<br>信息论 香农,在阅读<br>数学之美-吴军,在阅读<br>经济学通识-薛兆丰,在阅读<br>经济学原理 宏观 曼昆,在阅读<br>概率论导论,在阅读<br>肥尾效应,” 放弃”<br>艺术的故事,” 放弃”<br>第五项原则,” 放弃”<br>论历史,” 放弃”<br>泪之地,” 放弃”<br>精益系列6本,” 放弃”<br>原则 达利欧,” 放弃”<br>原则,” 放弃”<br>统计推断,” 放弃”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Name,状况&lt;br&gt;穿越非洲两百年,已完成&lt;br&gt;峰值体验,已完成&lt;br&gt;金字塔原理,已完成&lt;br&gt;论战略,已完成&lt;br&gt;真希望我父母读过这本书,已完成&lt;br&gt;资本无眠你可眠,已完成&lt;br&gt;世界上最简单的会计书,已完成&lt;br&gt;中国剩女调查,已完成&lt;br&gt;波特竞争系列2本,</summary>
+      
+    
+    
+    
+    <category term="personal" scheme="https://minipawl.com/categories/personal/"/>
+    
+    
+    <category term="工作感悟" scheme="https://minipawl.com/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>First to Data Analyst</title>
+    <link href="https://minipawl.com/2022/12/08/First%20to%20data%20analysis/"/>
+    <id>https://minipawl.com/2022/12/08/First%20to%20data%20analysis/</id>
+    <published>2022-12-08T13:54:39.000Z</published>
+    <updated>2023-06-09T12:06:51.549Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Data-Analyst"><a href="#Data-Analyst" class="headerlink" title="Data Analyst"></a>Data Analyst</h1><p>For data analysis, I think the most important thing is to clarify the business goals, identify the gaps with the goals, and determine the problems that need to be solved.</p><p>Core Issue 1: <strong>Defining the problem</strong> - Identifying the reasons for the gap (requires analytical ability and business sense, both personally and on average for peers)</p><p>Core Issue 2: <strong>Cause analysis</strong> - After finding possible reasons, refine the indicators</p><p>Core Issue 3: <strong>Analyzing indicators</strong> - Find the necessary data to support the analysis (how to find it depends on how to utilize tools)</p><p>Core Issue 4: <strong>Data analysis</strong> - Analysis methods</p><p>Core Issue 5: <strong>Solution testing</strong> - Once the cause is hypothesized, how to judge if the assumption is correct and proceed with the experiment</p><p>Core Issue 6: <strong>Continuous improvement</strong> - How to find predictive indicators to prevent similar problems from recurring and detect them early</p><p>For example, when analyzing the overspending of advertising budget:</p><p>First, you need to realize that the problem you are analyzing is overspending. Did you have a definition for overspending previously?</p><p>Then, what are the reasons?</p><ul><li>Sales</li><li>Price</li><li>Conversion</li><li>Bidding</li><li>Increase in bidding</li></ul><p>Overall increase? Local increase? factors? Market factors?</p><p>A particular department is having a problem; which product in the department?</p><p>How to prevent it?</p><p>Why do it?</p><p>What to do?</p><p>How to do it?</p><p>As for SQL statements, such as:</p><ol><li>Execution order</li><li>Table additions, deletions, and reductions, primary key PID</li><li>Aggregate functions</li><li>Date conversion</li><li>Table joins</li><li>Window functions</li><li>Sliding window functions</li><li>Row and column transformations</li></ol><p>In the era of GPT, is this really important?</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Data-Analyst&quot;&gt;&lt;a href=&quot;#Data-Analyst&quot; class=&quot;headerlink&quot; title=&quot;Data Analyst&quot;&gt;&lt;/a&gt;Data Analyst&lt;/h1&gt;&lt;p&gt;For data analysis, I think the</summary>
+      
+    
+    
+    
+    <category term="data" scheme="https://minipawl.com/categories/data/"/>
+    
+    
+    <category term="Data Analyst" scheme="https://minipawl.com/tags/Data-Analyst/"/>
+    
+  </entry>
+  
+</feed>
