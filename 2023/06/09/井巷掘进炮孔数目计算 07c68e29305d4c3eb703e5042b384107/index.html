@@ -17,14 +17,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta name="description" content="井巷掘进炮孔数目计算   岩石坚固性系数 &#x2F;f 掘进断面＜12 m2 掘进断面＞12 m2    1.6～3 2～3 2.5～3.5   4～6 1.5～2 2.2～2.5   7～20 1.2～1.8 1.5～2.2   请在下面输入岩石坚固系数和巷道截面，然后点击 “计算” 按钮以计算炮孔数目。  .input-container { display: flex; flex-dire">
 <meta property="og:type" content="article">
-<meta property="og:title" content="井巷掘进炮孔数目计算">
+<meta property="og:title" content="Boreholes calculation in open cut underground mining">
 <meta property="og:url" content="https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/index.html">
-<meta property="og:site_name" content="I am a Civil Engineer">
+<meta property="og:site_name" content="Civil engineer loves data science">
 <meta property="og:description" content="井巷掘进炮孔数目计算   岩石坚固性系数 &#x2F;f 掘进断面＜12 m2 掘进断面＞12 m2    1.6～3 2～3 2.5～3.5   4～6 1.5～2 2.2～2.5   7～20 1.2～1.8 1.5～2.2   请在下面输入岩石坚固系数和巷道截面，然后点击 “计算” 按钮以计算炮孔数目。  .input-container { display: flex; flex-dire">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://minipawl.com/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/Untitled.png">
 <meta property="article:published_time" content="2023-06-08T22:00:00.000Z">
-<meta property="article:modified_time" content="2023-06-10T19:38:16.591Z">
+<meta property="article:modified_time" content="2023-06-11T23:59:57.856Z">
 <meta property="article:author" content="Yunfei Li">
 <meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary">
@@ -48,7 +48,7 @@
       
     
     <!-- title -->
-    <title>井巷掘进炮孔数目计算</title>
+    <title>Boreholes calculation in open cut underground mining</title>
     <!-- async scripts -->
     <!-- Google Analytics -->
 
@@ -75,7 +75,7 @@
     
 	<!-- mathjax -->
 	
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="I am a Civil Engineer" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Civil engineer loves data science" type="application/atom+xml">
 </head>
 
 <body class="max-width mx-auto px3 ltr">
@@ -95,8 +95,6 @@
        --><li><a href="/categories/data">Data</a></li><!--
      --><!--
        --><li><a href="/categories/personal">Personal</a></li><!--
-     --><!--
-       --><li><a href="/CV/">Me</a></li><!--
      -->
       </ul>
     </span>
@@ -104,7 +102,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="Previous post" href="/2023/06/09/cactus%E4%BB%A3%E7%A0%81/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Previous post" href="/2023/06/09/Blasting%20parameters%20design%20for%20open-pit/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" aria-label="Next post" href="/2023/05/18/%E8%B7%A8%E5%A2%83%E4%BB%8E%E4%B8%9Ashi%E7%94%A8%E5%88%B0%E8%BF%87%E7%9A%84%E7%9F%A5%E8%AF%86%20f69d91b263104d3a80314b9f5945d397/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -121,16 +119,16 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&text=井巷掘进炮孔数目计算"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&is_video=false&description=井巷掘进炮孔数目计算"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=井巷掘进炮孔数目计算&body=Check out this article: https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&name=井巷掘进炮孔数目计算&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&t=井巷掘进炮孔数目计算"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&text=Boreholes calculation in open cut underground mining"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&is_video=false&description=Boreholes calculation in open cut underground mining"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Boreholes calculation in open cut underground mining&body=Check out this article: https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&name=Boreholes calculation in open cut underground mining&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&t=Boreholes calculation in open cut underground mining"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -150,7 +148,7 @@
   <header>
     
     <h1 class="posttitle p-name" itemprop="name headline">
-        井巷掘进炮孔数目计算
+        Boreholes calculation in open cut underground mining
     </h1>
 
 
@@ -302,8 +300,6 @@ document.getElementById('holeCount').textContent = holeCount;
         
           <li><a href="/categories/personal">Personal</a></li>
         
-          <li><a href="/CV/">Me</a></li>
-        
       </ul>
     </div>
 
@@ -317,16 +313,16 @@ document.getElementById('holeCount').textContent = holeCount;
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&text=井巷掘进炮孔数目计算"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&is_video=false&description=井巷掘进炮孔数目计算"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=井巷掘进炮孔数目计算&body=Check out this article: https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=井巷掘进炮孔数目计算"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&name=井巷掘进炮孔数目计算&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&t=井巷掘进炮孔数目计算"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&text=Boreholes calculation in open cut underground mining"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&is_video=false&description=Boreholes calculation in open cut underground mining"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Boreholes calculation in open cut underground mining&body=Check out this article: https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&title=Boreholes calculation in open cut underground mining"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&name=Boreholes calculation in open cut underground mining&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/06/09/%E4%BA%95%E5%B7%B7%E6%8E%98%E8%BF%9B%E7%82%AE%E5%AD%94%E6%95%B0%E7%9B%AE%E8%AE%A1%E7%AE%97%2007c68e29305d4c3eb703e5042b384107/&t=Boreholes calculation in open cut underground mining"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -363,8 +359,6 @@ document.getElementById('holeCount').textContent = holeCount;
        --><li><a href="/categories/data">Data</a></li><!--
      --><!--
        --><li><a href="/categories/personal">Personal</a></li><!--
-     --><!--
-       --><li><a href="/CV/">Me</a></li><!--
      -->
       </ul>
     </nav>
