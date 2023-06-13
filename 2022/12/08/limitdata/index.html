@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JYHGVG17LW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JYHGVG17LW');
+</script>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="数据局限性的思考亚马逊的算法与用户体验亚马逊电商平台服务对象是它的用户，所以它的算法必然是为用户的体验服务 即：用最快的时间买到想要的性价比高的产品，并且给亚马逊带来正向收益，飞轮效应 我们和亚马逊客户之间始终隔阂亚马逊算法，如果算法真的完全满足它的初始设定，那么你满足算法需求等于满足用户需求 这个隔阂距离无法完全消除但会逐渐减小 反过来看，算法并不只是遵从用户习惯，也能影响用户习惯（商业目的），">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据局限性的思考">
+<meta property="og:url" content="https://minipawl.com/2022/12/08/limitdata/index.html">
+<meta property="og:site_name" content="Civil engineer loves data science">
+<meta property="og:description" content="数据局限性的思考亚马逊的算法与用户体验亚马逊电商平台服务对象是它的用户，所以它的算法必然是为用户的体验服务 即：用最快的时间买到想要的性价比高的产品，并且给亚马逊带来正向收益，飞轮效应 我们和亚马逊客户之间始终隔阂亚马逊算法，如果算法真的完全满足它的初始设定，那么你满足算法需求等于满足用户需求 这个隔阂距离无法完全消除但会逐渐减小 反过来看，算法并不只是遵从用户习惯，也能影响用户习惯（商业目的），">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-08T17:54:39.000Z">
+<meta property="article:modified_time" content="2023-06-13T19:45:27.677Z">
+<meta property="article:author" content="Yunfei Li">
+<meta property="article:tag" content="工作感悟">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>数据局限性的思考</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYHGVG17LW"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYHGVG17LW');
+  </script>
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Civil engineer loves data science" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/categories/engineer">Engineer</a></li><!--
+     --><!--
+       --><li><a href="/categories/data">Data</a></li><!--
+     --><!--
+       --><li><a href="/categories/personal">Personal</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2022/12/10/dataanalyst/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/10/08/dataanalysis/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2022/12/08/limitdata/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2022/12/08/limitdata/&text=数据局限性的思考"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2022/12/08/limitdata/&is_video=false&description=数据局限性的思考"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=数据局限性的思考&body=Check out this article: https://minipawl.com/2022/12/08/limitdata/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2022/12/08/limitdata/&name=数据局限性的思考&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2022/12/08/limitdata/&t=数据局限性的思考"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%80%E9%99%90%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83"><span class="toc-number">1.</span> <span class="toc-text">数据局限性的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%9A%84%E7%AE%97%E6%B3%95%E4%B8%8E%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C"><span class="toc-number">1.1.</span> <span class="toc-text">亚马逊的算法与用户体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.1.1.</span> <span class="toc-text">数据的局限性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%A7%92%E5%BA%A6%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">数学角度的理解</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        数据局限性的思考
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Yunfei Li</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-12-08T17:54:39.000Z" class="dt-published" itemprop="datePublished">2022-12-08</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/data/">data</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E5%B7%A5%E4%BD%9C%E6%84%9F%E6%82%9F/" rel="tag">工作感悟</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="数据局限性的思考"><a href="#数据局限性的思考" class="headerlink" title="数据局限性的思考"></a>数据局限性的思考</h1><h2 id="亚马逊的算法与用户体验"><a href="#亚马逊的算法与用户体验" class="headerlink" title="亚马逊的算法与用户体验"></a>亚马逊的算法与用户体验</h2><p>亚马逊电商平台服务对象是它的用户，所以它的算法必然是为用户的体验服务</p>
+<p>即：用最快的时间买到想要的性价比高的产品，并且给亚马逊带来正向收益，飞轮效应</p>
+<p>我们和亚马逊客户之间始终隔阂亚马逊算法，如果算法真的完全满足它的初始设定，那么你满足算法需求等于满足用户需求</p>
+<p>这个隔阂距离无法完全消除但会逐渐减小</p>
+<p>反过来看，算法并不只是遵从用户习惯，也能影响用户习惯（商业目的），这是一个博弈过程</p>
+<h3 id="数据的局限性"><a href="#数据的局限性" class="headerlink" title="数据的局限性"></a>数据的局限性</h3><p>数据的局限性来源于数据样本的有限而非数据本身，所以通过有限的数据观察一定要注意它的边界。</p>
+<p>对卖家来说，算法本身是黑箱，即便有专利可以参考，但你无法确认亚马逊是否用了该专利以及部署时候的调参，同样的逻辑不同的参数也是不同的结果。</p>
+<p>是否还记得“火鸡”的故事？</p>
+<p>在火鸡饲养场里，有一只火鸡发现，第一天上午9点钟主人给它喂食。然而作为一个卓越的归纳主义者，它并不马上作出结论。它一直等到已收集了有关上午9点给它喂食这一经验事实的大量观察；而且，它是在多种情况下进行这些观察的：雨天和晴天，热天和冷天，星期三和星期四……它每天都在自己的记录表中加进新的观察陈述。最后，它的归纳主义良心感到满意，它进行归纳推理，得出了下面的结论：“主人总是在上午9点钟给我喂食。”可是，事情并不像它所想像的那样简单和乐观。在圣诞节前夕，当主人没有给它喂食，而是把它宰杀的时候，它通过归纳概括而得到的结论终于被无情地推翻了。大概火鸡临终前也会因此而感到深深遗憾。</p>
+<h3 id="数学角度的理解"><a href="#数学角度的理解" class="headerlink" title="数学角度的理解"></a>数学角度的理解</h3><p>假设有三个可能行的数学公式，你需要确认</p>
+<p>y&#x3D;x</p>
+<p>y&#x3D;x^2</p>
+<p>y&#x3D;x^3</p>
+<p>也许你善于观察的x,y变化，但在x 属于 0.9999到1.0001之间，这三个函数的差距很小，你也许在0.9999到1.0001之间观察到了几十万个sample.但是数据的“质量”堪忧，你无法得到好的结果。</p>
+<ul>
+<li>多数据优于好模型</li>
+<li>好数据优于多数据</li>
+<li>二八原则</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/categories/engineer">Engineer</a></li>
+        
+          <li><a href="/categories/data">Data</a></li>
+        
+          <li><a href="/categories/personal">Personal</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%B1%80%E9%99%90%E6%80%A7%E7%9A%84%E6%80%9D%E8%80%83"><span class="toc-number">1.</span> <span class="toc-text">数据局限性的思考</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%9A%84%E7%AE%97%E6%B3%95%E4%B8%8E%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C"><span class="toc-number">1.1.</span> <span class="toc-text">亚马逊的算法与用户体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">1.1.1.</span> <span class="toc-text">数据的局限性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E8%A7%92%E5%BA%A6%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">数学角度的理解</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2022/12/08/limitdata/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2022/12/08/limitdata/&text=数据局限性的思考"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2022/12/08/limitdata/&is_video=false&description=数据局限性的思考"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=数据局限性的思考&body=Check out this article: https://minipawl.com/2022/12/08/limitdata/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2022/12/08/limitdata/&title=数据局限性的思考"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2022/12/08/limitdata/&name=数据局限性的思考&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2022/12/08/limitdata/&t=数据局限性的思考"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    Yunfei Li
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/categories/engineer">Engineer</a></li><!--
+     --><!--
+       --><li><a href="/categories/data">Data</a></li><!--
+     --><!--
+       --><li><a href="/categories/personal">Personal</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
