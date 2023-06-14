@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JYHGVG17LW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JYHGVG17LW');
+</script>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Table of Contents  Introduction to p-value The Null Hypothesis and the Alternative Hypothesis Calculating the p-value Interpreting the p-value Examples of p-value in real-life situations Conclusion">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Demystifying the p-value">
+<meta property="og:url" content="https://minipawl.com/2023/05/27/pvalue/index.html">
+<meta property="og:site_name" content="Civil engineer loves data science">
+<meta property="og:description" content="Table of Contents  Introduction to p-value The Null Hypothesis and the Alternative Hypothesis Calculating the p-value Interpreting the p-value Examples of p-value in real-life situations Conclusion">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-26T22:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-14T10:36:07.643Z">
+<meta property="article:author" content="Yunfei Li">
+<meta property="article:tag" content="share">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Demystifying the p-value</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYHGVG17LW"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYHGVG17LW');
+  </script>
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Civil engineer loves data science" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/categories/engineer">Engineer</a></li><!--
+     --><!--
+       --><li><a href="/categories/data">Data</a></li><!--
+     --><!--
+       --><li><a href="/categories/personal">Personal</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/06/07/beasb/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/05/22/Blastingopenpit/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2023/05/27/pvalue/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/05/27/pvalue/&text=Demystifying the p-value"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/05/27/pvalue/&is_video=false&description=Demystifying the p-value"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Demystifying the p-value&body=Check out this article: https://minipawl.com/2023/05/27/pvalue/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/05/27/pvalue/&name=Demystifying the p-value&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/05/27/pvalue/&t=Demystifying the p-value"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction-to-p-value"><span class="toc-number">1.</span> <span class="toc-text">1. Introduction to p-value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-The-Null-Hypothesis-and-the-Alternative-Hypothesis"><span class="toc-number">2.</span> <span class="toc-text">2. The Null Hypothesis and the Alternative Hypothesis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Calculating-the-p-value"><span class="toc-number">3.</span> <span class="toc-text">3. Calculating the p-value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Interpreting-the-p-value"><span class="toc-number">4.</span> <span class="toc-text">4. Interpreting the p-value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Examples-of-p-value-in-real-life-situations"><span class="toc-number">5.</span> <span class="toc-text">5. Examples of p-value in real-life situations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-1-Testing-a-new-drug"><span class="toc-number">5.1.</span> <span class="toc-text">Example 1: Testing a new drug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-2-Examining-the-relationship-between-two-variables"><span class="toc-number">5.2.</span> <span class="toc-text">Example 2: Examining the relationship between two variables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Conclusion"><span class="toc-number">6.</span> <span class="toc-text">6. Conclusion</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Demystifying the p-value
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Yunfei Li</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-05-26T22:00:00.000Z" class="dt-published" itemprop="datePublished">2023-05-27</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/data/">data</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/share/" rel="tag">share</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p><strong>Table of Contents</strong></p>
+<ol>
+<li><a href="notion://www.notion.so/minipawl/Simply-explain-the-P-value-in-statistics-81e53fc565a34fa99b5a0cfa87c7c38b#introduction">Introduction to p-value</a></li>
+<li><a href="notion://www.notion.so/minipawl/Simply-explain-the-P-value-in-statistics-81e53fc565a34fa99b5a0cfa87c7c38b#hypotheses">The Null Hypothesis and the Alternative Hypothesis</a></li>
+<li><a href="notion://www.notion.so/minipawl/Simply-explain-the-P-value-in-statistics-81e53fc565a34fa99b5a0cfa87c7c38b#calculation">Calculating the p-value</a></li>
+<li><a href="notion://www.notion.so/minipawl/Simply-explain-the-P-value-in-statistics-81e53fc565a34fa99b5a0cfa87c7c38b#interpretation">Interpreting the p-value</a></li>
+<li><a href="notion://www.notion.so/minipawl/Simply-explain-the-P-value-in-statistics-81e53fc565a34fa99b5a0cfa87c7c38b#examples">Examples of p-value in real-life situations</a></li>
+<li><a href="notion://www.notion.so/minipawl/Simply-explain-the-P-value-in-statistics-81e53fc565a34fa99b5a0cfa87c7c38b#conclusion">Conclusion</a></li>
+</ol>
+<p><a name="introduction"></a></p>
+<h2 id="1-Introduction-to-p-value"><a href="#1-Introduction-to-p-value" class="headerlink" title="1. Introduction to p-value"></a>1. Introduction to p-value</h2><p>The p-value, or probability value, is a concept used in hypothesis testing and is a fundamental aspect of statistical analysis. It is a measure of the probability that an observed effect in a dataset occurred by chance alone. In other words, the p-value gives us an idea of how likely it is that we would observe the data we have if there were no real underlying effect.</p>
+<p>In this blog post, we will break down the concept of the p-value, explain how it’s calculated, and provide examples to help you better understand and interpret p-values in your own research.</p>
+<p><a name="hypotheses"></a></p>
+<h2 id="2-The-Null-Hypothesis-and-the-Alternative-Hypothesis"><a href="#2-The-Null-Hypothesis-and-the-Alternative-Hypothesis" class="headerlink" title="2. The Null Hypothesis and the Alternative Hypothesis"></a>2. The Null Hypothesis and the Alternative Hypothesis</h2><p>Before we dive into p-values, it’s important to understand the concept of hypothesis testing. In a hypothesis test, two opposing hypotheses are presented:</p>
+<ol>
+<li><strong>Null Hypothesis (H0):</strong> This hypothesis states that there is no significant difference between the observed effect and the expected effect. In other words, any effect observed in the data is due to random chance.</li>
+<li><strong>Alternative Hypothesis (H1):</strong> This hypothesis states that there is a significant difference between the observed effect and the expected effect. In other words, the effect observed in the data is not due to random chance, but rather due to an underlying cause.</li>
+</ol>
+<p>Our goal in hypothesis testing is to determine whether we should accept or reject the null hypothesis based on the data we have collected.</p>
+<p><a name="calculation"></a></p>
+<h2 id="3-Calculating-the-p-value"><a href="#3-Calculating-the-p-value" class="headerlink" title="3. Calculating the p-value"></a>3. Calculating the p-value</h2><p>The p-value is the probability of observing a test statistic as extreme or more extreme than the one calculated from our data, assuming that the null hypothesis is true. To calculate the p-value, we follow these steps:</p>
+<ol>
+<li>Assume that the null hypothesis is true.</li>
+<li>Calculate the test statistic from the data.</li>
+<li>Determine the probability of observing a test statistic as extreme or more extreme than the calculated test statistic, assuming the null hypothesis is true. This probability is the p-value.</li>
+</ol>
+<p>In general, the formula for calculating the p-value is:</p>
+<p><code>p-value = P(T &gt; t | H0)</code></p>
+<p>where <code>T</code> is the test statistic, <code>t</code> is the observed value of the test statistic, and <code>H0</code> is the null hypothesis.</p>
+<p><a name="interpretation"></a></p>
+<h2 id="4-Interpreting-the-p-value"><a href="#4-Interpreting-the-p-value" class="headerlink" title="4. Interpreting the p-value"></a>4. Interpreting the p-value</h2><p>After calculating the p-value, we compare it to a predetermined significance level (α), which is usually set at 0.05. The significance level represents the probability of rejecting the null hypothesis when it’s true.</p>
+<ul>
+<li>If the p-value is less than or equal to α (p ≤ α), we reject the null hypothesis and accept the alternative hypothesis. In this case, we consider the observed effect to be statistically significant.</li>
+<li>If the p-value is greater than α (p &gt; α), we fail to reject the null hypothesis. In this case, we consider the observed effect to be statistically insignificant and attribute it to random chance.</li>
+</ul>
+<p><a name="examples"></a></p>
+<h2 id="5-Examples-of-p-value-in-real-life-situations"><a href="#5-Examples-of-p-value-in-real-life-situations" class="headerlink" title="5. Examples of p-value in real-life situations"></a>5. Examples of p-value in real-life situations</h2><h3 id="Example-1-Testing-a-new-drug"><a href="#Example-1-Testing-a-new-drug" class="headerlink" title="Example 1: Testing a new drug"></a>Example 1: Testing a new drug</h3><p>A pharmaceutical company wants to test the effectiveness of a new drug designed to lower blood pressure. They set up a clinical trial with a control group and a treatment group. The null hypothesis is that the drug has no significant effect on blood pressure, while the alternative hypothesis is that the drug does have a significant effect.</p>
+<p>After the trial, the researchers calculate a p-value of 0.03. Since the p-value is less than the significance level of 0.05, they reject the null hypothesis and conclude that the drug has a significant effect on blood pressure.</p>
+<h3 id="Example-2-Examining-the-relationship-between-two-variables"><a href="#Example-2-Examining-the-relationship-between-two-variables" class="headerlink" title="Example 2: Examining the relationship between two variables"></a>Example 2: Examining the relationship between two variables</h3><p>A researcher is studying the relationship between hours spent studying and test scores. The null hypothesis is that there is no significant relationship between the two variables, while the alternative hypothesis is that there is a significant relationship.</p>
+<p>After analyzing the data, the researcher calculates a p-value of 0.08. Since the p-value is greater than the significance level of 0.05, they fail to reject the null hypothesis and conclude that there is no significant relationship between hours spent studying and test scores.</p>
+<p><a name="conclusion"></a></p>
+<h2 id="6-Conclusion"><a href="#6-Conclusion" class="headerlink" title="6. Conclusion"></a>6. Conclusion</h2><p>The p-value is a crucial concept in hypothesis testing and statistical analysis. It allows us to determine whether an observed effect ina dataset is likely due to random chance or an underlying cause. By comparing the p-value to a predetermined significance level, we can decide whether to reject or fail to reject the null hypothesis, which ultimately helps us make informed decisions based on our data.</p>
+<p>It’s essential to remember that a low p-value does not prove that the null hypothesis is false. It only indicates that, given the data, the observed effect is unlikely to have occurred by chance alone. Additionally, a high p-value does not prove that the null hypothesis is true. It simply suggests that the data does not provide sufficient evidence to reject it. As researchers, we must always consider the context and limitations of our studies when interpreting p-values and drawing conclusions.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/categories/engineer">Engineer</a></li>
+        
+          <li><a href="/categories/data">Data</a></li>
+        
+          <li><a href="/categories/personal">Personal</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction-to-p-value"><span class="toc-number">1.</span> <span class="toc-text">1. Introduction to p-value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-The-Null-Hypothesis-and-the-Alternative-Hypothesis"><span class="toc-number">2.</span> <span class="toc-text">2. The Null Hypothesis and the Alternative Hypothesis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Calculating-the-p-value"><span class="toc-number">3.</span> <span class="toc-text">3. Calculating the p-value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Interpreting-the-p-value"><span class="toc-number">4.</span> <span class="toc-text">4. Interpreting the p-value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Examples-of-p-value-in-real-life-situations"><span class="toc-number">5.</span> <span class="toc-text">5. Examples of p-value in real-life situations</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-1-Testing-a-new-drug"><span class="toc-number">5.1.</span> <span class="toc-text">Example 1: Testing a new drug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-2-Examining-the-relationship-between-two-variables"><span class="toc-number">5.2.</span> <span class="toc-text">Example 2: Examining the relationship between two variables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Conclusion"><span class="toc-number">6.</span> <span class="toc-text">6. Conclusion</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://minipawl.com/2023/05/27/pvalue/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://minipawl.com/2023/05/27/pvalue/&text=Demystifying the p-value"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://minipawl.com/2023/05/27/pvalue/&is_video=false&description=Demystifying the p-value"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Demystifying the p-value&body=Check out this article: https://minipawl.com/2023/05/27/pvalue/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://minipawl.com/2023/05/27/pvalue/&title=Demystifying the p-value"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://minipawl.com/2023/05/27/pvalue/&name=Demystifying the p-value&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://minipawl.com/2023/05/27/pvalue/&t=Demystifying the p-value"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    Yunfei Li
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/categories/engineer">Engineer</a></li><!--
+     --><!--
+       --><li><a href="/categories/data">Data</a></li><!--
+     --><!--
+       --><li><a href="/categories/personal">Personal</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
