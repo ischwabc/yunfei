@@ -6,7 +6,7 @@
   <link href="https://minipawl.com/atom.xml" rel="self"/>
   
   <link href="https://minipawl.com/"/>
-  <updated>2023-06-23T21:22:16.855Z</updated>
+  <updated>2023-07-14T11:34:06.578Z</updated>
   <id>https://minipawl.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>定制类目快捷搜索工具</title>
+    <link href="https://minipawl.com/2023/07/16/amazontool/"/>
+    <id>https://minipawl.com/2023/07/16/amazontool/</id>
+    <published>2023-07-15T22:00:00.000Z</published>
+    <updated>2023-07-14T11:34:06.578Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="定制类目"><a href="#定制类目" class="headerlink" title="定制类目"></a>定制类目</h1><h3 id="搜索框"><a href="#搜索框" class="headerlink" title="搜索框"></a>搜索框</h3><div>  <select id="country">    <option value="US">US</option>    <option value="UK">UK</option>    <option value="DE">DE</option>    <option value="FR">FR</option>    <option value="IT">IT</option>    <option value="ES">ES</option>    <option value="CA">CA</option>  </select>    <input type="text" id="keyword" placeholder="Enter keyword">    <label>    <input type="radio" name="searchType" value="new" checked> 新上架  </label>    <label>    <input type="radio" name="searchType" value="popular"> 热卖  </label>  <p>  <button onclick="search()">Search Amazon</button><br>  <button onclick="searchGoogleTrends()">Google Trends</button></p></div><script>function search() {  var country = document.getElementById("country").value;  var keyword = document.getElementById("keyword").value;  var searchType = document.querySelector('input[name="searchType"]:checked').value;  var baseUrl;  if (country === "US") {    baseUrl = "https://www.amazon.com/s?k=";  } else if (country === "UK") {    baseUrl = "https://www.amazon.co.uk/s?k=";  } else if (country === "CA") {    baseUrl = "https://www.amazon.ca/s?k=";  } else if (country === "DE") {    baseUrl = "https://www.amazon.de/s?k=";  } else if (country === "FR") {    baseUrl = "https://www.amazon.fr/s?k=";  } else if (country === "ES") {    baseUrl = "https://www.amazon.es/s?k=";  } else if (country === "IT") {    baseUrl = "https://www.amazon.it/s?k=";  } else {    // Handle other countries if needed  }  if (baseUrl) {    var url;    if (searchType === "new") {      url = baseUrl + encodeURIComponent(keyword) + "&i=amazon-custom-products&s=date-desc-rank";    } else if (searchType === "popular") {      url = baseUrl + encodeURIComponent(keyword) + "&i=s=exact-aware-popularity-rank";    }    window.open(url, "_blank");  }}function searchGoogleTrends() {  var country = document.getElementById("country").value;  var keyword = document.getElementById("keyword").value;  var url;  if (country === "US") {    url = "https://trends.google.com/trends/explore?geo=US&q=" + encodeURIComponent(keyword);  } else if (country === "UK") {    url = "https://trends.google.com/trends/explore?geo=GB&q=" + encodeURIComponent(keyword);  } else if (country === "CA") {    url = "https://trends.google.com/trends/explore?geo=CA&q=" + encodeURIComponent(keyword);  } else if (country === "DE") {    url = "https://trends.google.com/trends/explore?geo=DE&q=" + encodeURIComponent(keyword);  } else {    // Handle other countries if needed    url = "https://trends.google.com/trends/explore?q=" + encodeURIComponent(keyword);  }  window.open(url, "_blank");}function checkKey(event) {  if (event.keyCode === 13) { // Enter key code    search();  }}</script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;定制类目&quot;&gt;&lt;a href=&quot;#定制类目&quot; class=&quot;headerlink&quot; title=&quot;定制类目&quot;&gt;&lt;/a&gt;定制类目&lt;/h1&gt;&lt;h3 id=&quot;搜索框&quot;&gt;&lt;a href=&quot;#搜索框&quot; class=&quot;headerlink&quot; title=&quot;搜索框&quot;&gt;&lt;/a&gt;搜索</summary>
+      
+    
+    
+    
+    <category term="data" scheme="https://minipawl.com/categories/data/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Underground blasting design Cut area sapcing recomendation (burn cut)</title>
