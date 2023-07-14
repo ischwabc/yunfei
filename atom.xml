@@ -6,7 +6,7 @@
   <link href="https://minipawl.com/atom.xml" rel="self"/>
   
   <link href="https://minipawl.com/"/>
-  <updated>2023-07-14T11:34:06.578Z</updated>
+  <updated>2023-07-14T14:16:03.229Z</updated>
   <id>https://minipawl.com/</id>
   
   <author>
@@ -17,23 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>定制类目快捷搜索工具</title>
+    <title>Amazon工具</title>
     <link href="https://minipawl.com/2023/07/16/amazontool/"/>
     <id>https://minipawl.com/2023/07/16/amazontool/</id>
     <published>2023-07-15T22:00:00.000Z</published>
-    <updated>2023-07-14T11:34:06.578Z</updated>
+    <updated>2023-07-14T14:16:03.229Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="定制类目"><a href="#定制类目" class="headerlink" title="定制类目"></a>定制类目</h1><h3 id="搜索框"><a href="#搜索框" class="headerlink" title="搜索框"></a>搜索框</h3><div>  <select id="country">    <option value="US">US</option>    <option value="UK">UK</option>    <option value="DE">DE</option>    <option value="FR">FR</option>    <option value="IT">IT</option>    <option value="ES">ES</option>    <option value="CA">CA</option>  </select>    <input type="text" id="keyword" placeholder="Enter keyword">    <label>    <input type="radio" name="searchType" value="new" checked> 新上架  </label>    <label>    <input type="radio" name="searchType" value="popular"> 热卖  </label>  <p>  <button onclick="search()">Search Amazon</button><br>  <button onclick="searchGoogleTrends()">Google Trends</button></p></div><script>function search() {  var country = document.getElementById("country").value;  var keyword = document.getElementById("keyword").value;  var searchType = document.querySelector('input[name="searchType"]:checked').value;  var baseUrl;  if (country === "US") {    baseUrl = "https://www.amazon.com/s?k=";  } else if (country === "UK") {    baseUrl = "https://www.amazon.co.uk/s?k=";  } else if (country === "CA") {    baseUrl = "https://www.amazon.ca/s?k=";  } else if (country === "DE") {    baseUrl = "https://www.amazon.de/s?k=";  } else if (country === "FR") {    baseUrl = "https://www.amazon.fr/s?k=";  } else if (country === "ES") {    baseUrl = "https://www.amazon.es/s?k=";  } else if (country === "IT") {    baseUrl = "https://www.amazon.it/s?k=";  } else {    // Handle other countries if needed  }  if (baseUrl) {    var url;    if (searchType === "new") {      url = baseUrl + encodeURIComponent(keyword) + "&i=amazon-custom-products&s=date-desc-rank";    } else if (searchType === "popular") {      url = baseUrl + encodeURIComponent(keyword) + "&i=s=exact-aware-popularity-rank";    }    window.open(url, "_blank");  }}function searchGoogleTrends() {  var country = document.getElementById("country").value;  var keyword = document.getElementById("keyword").value;  var url;  if (country === "US") {    url = "https://trends.google.com/trends/explore?geo=US&q=" + encodeURIComponent(keyword);  } else if (country === "UK") {    url = "https://trends.google.com/trends/explore?geo=GB&q=" + encodeURIComponent(keyword);  } else if (country === "CA") {    url = "https://trends.google.com/trends/explore?geo=CA&q=" + encodeURIComponent(keyword);  } else if (country === "DE") {    url = "https://trends.google.com/trends/explore?geo=DE&q=" + encodeURIComponent(keyword);  } else {    // Handle other countries if needed    url = "https://trends.google.com/trends/explore?q=" + encodeURIComponent(keyword);  }  window.open(url, "_blank");}function checkKey(event) {  if (event.keyCode === 13) { // Enter key code    search();  }}</script>]]></content>
+    <content type="html"><![CDATA[<h1 id="定制类目搜索框"><a href="#定制类目搜索框" class="headerlink" title="定制类目搜索框"></a>定制类目搜索框</h1><div>  <select id="country">    <option value="US">US</option>    <option value="UK">UK</option>    <option value="DE">DE</option>    <option value="FR">FR</option>    <option value="IT">IT</option>    <option value="ES">ES</option>    <option value="CA">CA</option>  </select>    <input type="text" id="keyword" placeholder="Enter keyword">    <label>    <input type="radio" name="searchType" value="new" checked> 新上架  </label>    <label>    <input type="radio" name="searchType" value="popular"> 热卖  </label>  <p>  <button onclick="search()">Search Amazon</button><br>  <button onclick="searchGoogleTrends()">Google Trends</button></p></div><script>function search() {  var country = document.getElementById("country").value;  var keyword = document.getElementById("keyword").value;  var searchType = document.querySelector('input[name="searchType"]:checked').value;  var baseUrl;  if (country === "US") {    baseUrl = "https://www.amazon.com/s?k=";  } else if (country === "UK") {    baseUrl = "https://www.amazon.co.uk/s?k=";  } else if (country === "CA") {    baseUrl = "https://www.amazon.ca/s?k=";  } else if (country === "DE") {    baseUrl = "https://www.amazon.de/s?k=";  } else if (country === "FR") {    baseUrl = "https://www.amazon.fr/s?k=";  } else if (country === "ES") {    baseUrl = "https://www.amazon.es/s?k=";  } else if (country === "IT") {    baseUrl = "https://www.amazon.it/s?k=";  } else {    // Handle other countries if needed  }  if (baseUrl) {    var url;    if (searchType === "new") {      url = baseUrl + encodeURIComponent(keyword) + "&i=amazon-custom-products&s=date-desc-rank";    } else if (searchType === "popular") {      url = baseUrl + encodeURIComponent(keyword) + "&i=s=exact-aware-popularity-rank";    }    window.open(url, "_blank");  }}function searchGoogleTrends() {  var country = document.getElementById("country").value;  var keyword = document.getElementById("keyword").value;  var url;  if (country === "US") {    url = "https://trends.google.com/trends/explore?geo=US&q=" + encodeURIComponent(keyword);  } else if (country === "UK") {    url = "https://trends.google.com/trends/explore?geo=GB&q=" + encodeURIComponent(keyword);  } else if (country === "CA") {    url = "https://trends.google.com/trends/explore?geo=CA&q=" + encodeURIComponent(keyword);  } else if (country === "DE") {    url = "https://trends.google.com/trends/explore?geo=DE&q=" + encodeURIComponent(keyword);  } else {    // Handle other countries if needed    url = "https://trends.google.com/trends/explore?q=" + encodeURIComponent(keyword);  }  window.open(url, "_blank");}function checkKey(event) {  if (event.keyCode === 13) { // Enter key code    search();  }}</script><hr><h1 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h1><h4 id="趋势链接"><a href="#趋势链接" class="headerlink" title="趋势链接"></a>趋势链接</h4><ul><li><a href="https://trends.google.com/">Google Trends（谷歌趋势）</a></li><li><a href="https://ads.google.cn/marketfinder/">谷歌发掘全球商机</a></li><li><a href="https://www.thinkwithgoogle.com/feature/category-trends/us/week/en">谷歌全球零售趋势查询</a></li><li><a href="https://www.bestreviews.guide/categories">最佳产品指南</a></li><li><a href="https://explodingtopics.com/">发现爆炸性话题</a></li><li><a href="https://www.trendhunter.com/">TREND HUNTER 趋势猎人</a></li><li><a href="https://business.pinterest.com/en-gb/content/pinterest-predicts/">Pinterest流行趋势</a></li><li><a href="http://www.ywindex.com/">义乌小商品指数</a></li></ul><h4 id="专利查询"><a href="#专利查询" class="headerlink" title="专利查询"></a>专利查询</h4><ul><li><a href="https://tmsearch.uspto.gov/bin/gate.exe?f=searchss&state=4802:nujhmm.1.1">美国商标查询</a></li><li><a href="http://patft.uspto.gov/">美国专利局</a></li><li><a href="https://euipo.europa.eu/">欧洲商标局</a></li><li><a href="https://www.epo.org/searching-for-patents.html">欧洲专利局</a></li><li><a href="http://www.ipo.gov.uk/">英国商标局</a></li></ul><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><ul><li><a href="http://43.248.49.97/">中国海关统计数据</a></li><li><a href="http://hd.chinatax.gov.cn/nszx/InitChukou.html">出口退税率查询</a></li><li><a href="http://cacs.mofcom.gov.cn/index.shtml">商品反倾销查询</a></li><li><a href="http://www.customs.gov.cn/customs/302427/302442/tgzt/index.html">通关状态查询</a></li><li><a href="http://wmsw.mofcom.gov.cn/wmsw/">进出口税费查询</a></li><li><a href="http://fta.mofcom.gov.cn/">中国自贸区查询</a></li><li><a href="http://go.amazonsellerservices.com/advertising-eCalendar">亚马逊节日关键词日历</a></li><li><a href="https://tbt.sist.org.cn/mbsc_106/">技术壁垒资源网</a></li><li><a href="https://www.iamwawa.cn/">蛙蛙在线工具</a></li><li><a href="https://www.acronymfinder.com/">英文缩写查询</a></li><li><a href="https://verify-email.org/">验证邮箱真假</a></li><li><a href="https://n9.cl/zh">N9短链接生成器</a></li><li><a href="https://www.pdfpai.com/">在线PDF工具</a></li><li><a href="https://www.uupoop.com/#/">在线PS工具</a></li><li><a href="https://www.iloveimg.com/">在线图片编辑器</a></li><li><a href="https://bigjpg.com/">图片无损放大</a></li><li><a href="https://www.remove.bg/">在线抠图</a></li><li><a href="https://pixabay.com/">免费正版图片库</a></li><li><a href="https://mjzj.com/newmjzj/tools/unitConversion">万能单位换算器</a></li><li><a href="https://mjzj.com/newmjzj/tools/visualEditor">可视化编辑器</a></li><li><a href="https://mjzj.com/newmjzj/tools/wordStatistics">单词词频统计</a></li><li><a href="https://mjzj.com/newmjzj/tools/paypalCompute">PayPal手续费计算器</a></li><li><a href="https://mjzj.com/newmjzj/tools/costAndProfits">成本利润计算</a></li><li><a href="https://www.iamwawa.cn/daxiaoxie.html">大小写转换</a></li><li><a href="https://www.iamwawa.cn/quchong.html">去除重复文本</a></li><li><a href="https://mjzj.com/newmjzj/tools/UpcBlade">UPC在线生成</a></li><li><a href="https://cli.im/">二维码生成器</a></li><li><a href="https://www.deepl.com/translator">DeepL翻译器</a></li><li><a href="http://www.shijian.cc/jieri/">各国节日时间</a></li><li><a href="https://www.nowmsg.com/">全球邮编地址</a></li><li><a href="https://www.iamwawa.cn/huilv.html">全球货币汇率换算</a></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;定制类目&quot;&gt;&lt;a href=&quot;#定制类目&quot; class=&quot;headerlink&quot; title=&quot;定制类目&quot;&gt;&lt;/a&gt;定制类目&lt;/h1&gt;&lt;h3 id=&quot;搜索框&quot;&gt;&lt;a href=&quot;#搜索框&quot; class=&quot;headerlink&quot; title=&quot;搜索框&quot;&gt;&lt;/a&gt;搜索</summary>
+    <summary type="html">&lt;h1 id=&quot;定制类目搜索框&quot;&gt;&lt;a href=&quot;#定制类目搜索框&quot; class=&quot;headerlink&quot; title=&quot;定制类目搜索框&quot;&gt;&lt;/a&gt;定制类目搜索框&lt;/h1&gt;&lt;div&gt;
+  &lt;select id=&quot;country&quot;&gt;
+    &lt;option value=&quot;US&quot;&gt;</summary>
       
     
     
     
     <category term="data" scheme="https://minipawl.com/categories/data/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://minipawl.com/2023/07/14/google%20keyword/"/>
+    <id>https://minipawl.com/2023/07/14/google%20keyword/</id>
+    <published>2023-07-14T11:36:40.065Z</published>
+    <updated>2023-07-14T11:53:15.294Z</updated>
+    
+    <content type="html"><![CDATA[<!DOCTYPE html><html><head>  <title>关键词搜索</title></head><body>  <div>    <label for="country">选择国家：</label>    <select id="country">      <option value="US">美国</option>      <option value="UK">英国</option>      <option value="DE">德国</option>      <option value="FR">法国</option>      <option value="IT">意大利</option>      <option value="ES">西班牙</option>      <option value="CA">加拿大</option>    </select>  </div>  <div>    <label for="keyword">关键词：</label>    <input type="text" id="keyword" placeholder="请输入关键词">    <button onclick="search()">搜索</button>  </div>  <div id="relatedKeywords"></div>  <script>    function search() {      var country = document.getElementById("country").value;      var keyword = document.getElementById("keyword").value;      // 构建Google推荐关键词的URL      var googleUrl = "https://suggestqueries.google.com/complete/search?client=firefox&q=" + encodeURIComponent(keyword) + "&hl=" + country;      // 清空之前的相关关键词      var relatedKeywordsContainer = document.getElementById("relatedKeywords");      relatedKeywordsContainer.innerHTML = "";      // 创建一个script元素来加载Google推荐关键词的数据      var script = document.createElement("script");      script.src = googleUrl;      document.body.appendChild(script);    }    // Google推荐关键词的回调函数    function googleCallback(data) {      var relatedKeywordsContainer = document.getElementById("relatedKeywords");      if (data && data[1]) {        var relatedKeywords = data[1];        // 将相关关键词添加到页面中        relatedKeywords.forEach(function(keyword) {          var keywordElement = document.createElement("p");          keywordElement.textContent = keyword;          relatedKeywordsContainer.appendChild(keywordElement);        });      }    }  </script><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"PERSONALIZED","geo":"US","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=US&q=PERSONALIZED&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"}); </script></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;关键词搜索&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;label for=&quot;country&quot;&gt;选择国家：&lt;/label&gt;
+    &lt;select id=&quot;country&quot;&gt;</summary>
+      
+    
+    
     
     
   </entry>
